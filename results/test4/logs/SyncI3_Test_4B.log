@@ -1,0 +1,78 @@
+*** Booting nRF Connect SDK v2.7.0-5cb85570ca43 ***
+*** Using Zephyr OS v3.6.99-100befc70c74 ***
+Test 4 Broadcaster (Iris3) starting
+[00:00:00.378,784] [0m<inf> bt_hci_core: hci_vs_init: HW Platform: Nordic Semiconductor (0x0002)[0m
+[00:00:00.378,814] [0m<inf> bt_hci_core: hci_vs_init: HW Variant: nRF52x (0x0002)[0m
+[00:00:00.378,845] [0m<inf> bt_hci_core: hci_vs_init: Firmware: Standard Bluetooth controller (0x00) Version 3.6 Build 99[0m
+[00:00:00.379,577] [0m<inf> bt_hci_core: bt_dev_show_info: Identity: F7:46:C7:CA:B7:7F (random)[0m
+[00:00:00.379,608] [0m<inf> bt_hci_core: bt_dev_show_info: HCI: version 5.4 (0x0d) revision 0x0000, manufacturer 0x0059[0m
+[00:00:00.379,638] [0m<inf> bt_hci_core: bt_dev_show_info: LMP: version 5.4 (0x0d) subver 0xffff[0m
+Bluetooth initialized
+Broadcasting synchronization signal with counter: 1
+Broadcasting synchronization signal with counter: 2
+Broadcasting synchronization signal with counter: 3
+Broadcasting synchronization signal with counter: 4
+Broadcasting synchronization signal with counter: 5
+Broadcasting synchronization signal with counter: 6
+Broadcasting synchronization signal with counter: 7
+Broadcasting synchronization signal with counter: 8
+Broadcasting synchronization signal with counter: 9
+Broadcasting synchronization signal with counter: 10
+Broadcasting synchronization signal with counter: 11
+Broadcasting synchronization signal with counter: 12
+Broadcasting synchronization signal with counter: 13
+*** Booting nRF Connect SDK v2.7.0-5cb85570ca43 ***
+*** Using Zephyr OS v3.6.99-100befc70c74 ***
+Test 4 Broadcaster (Iris3) starting
+[00:00:00.379,608] [0m<inf> bt_hci_core: hci_vs_init: HW Platform: Nordic Semiconductor (0x0002)[0m
+[00:00:00.379,638] [0m<inf> bt_hci_core: hci_vs_init: HW Variant: nRF52x (0x0002)[0m
+[00:00:00.379,669] [0m<inf> bt_hci_core: hci_vs_init: Firmware: Standard Bluetooth controller (0x00) Version 3.6 Build 99[0m
+[00:00:00.380,401] [0m<inf> bt_hci_core: bt_dev_show_info: Identity: F7:46:C7:CA:B7:7F (random)[0m
+[00:00:00.380,432] [0m<inf> bt_hci_core: bt_dev_show_info: HCI: version 5.4 (0x0d) revision 0x0000, manufacturer 0x0059[0m
+[00:00:00.380,462] [0m<inf> bt_hci_core: bt_dev_show_info: LMP: version 5.4 (0x0d) subver 0xffff[0m
+Bluetooth initialized
+Broadcasting synchronization signal with counter: 1
+Broadcasting synchronization signal with counter: 2
+Broadcasting synchronization signal with counter: 3
+Broadcasting synchronization signal with counter: 4
+Broadcasting synchronization signal with counter: 5
+Broadcasting synchronization signal with counter: 6
+Broadcasting synchronization signal with counter: 7
+Broadcasting synchronization signal with counter: 8
+Broadcasting synchronization signal with counter: 9
+Broadcasting synchronization signal with counter: 10
+Broadcasting synchronization signal with counter: 11
+Broadcasting synchronization signal with counter: 12
+Broadcasting synchronization signal with counter: 13
+Broadcasting synchronization signal with counter: 14
+Broadcasting synchronization signal with counter: 15
+Broadcasting synchronization signal with counter: 16
+Broadcasting synchronization signal with counter: 17
+Broadcasting synchronization signal with counter: 18
+Broadcasting synchronization signal with counter: 19
+Broadcasting synchronization signal with counter: 20
+Broadcasting synchronization signal with counter: 21
+Broadcasting synchronization signal with counter: 22
+Broadcasting synchronization signal with counter: 23
+Broadcasting synchronization signal with counter: 24
+Broadcasting synchronization signal with counter: 25
+Broadcasting synchronization signal with counter: 26
+Broadcasting synchronization signal with counter: 27
+Broadcasting synchronization signal with counter: 28
+Broadcasting synchronization signal with counter: 29
+Broadcasting synchronization signal with counter: 30
+Broadcasting synchronization signal with counter: 31
+Broadcasting synchronization signal with counter: 32
+Broadcasting synchronization signal with counter: 33
+Broadcasting synchronization signal with counter: 34
+Broadcasting synchronization signal with counter: 35
+Broadcasting synchronization signal with counter: 36
+Broadcasting synchronization signal with counter: 37
+Broadcasting synchronization signal with counter: 38
+Broadcasting synchronization signal with counter: 39
+Broadcasting synchronization signal with counter: 40
+Broadcasting synchronization signal with counter: 41
+Broadcasting synchronization signal with counter: 42
+Broadcasting synchronization signal with counter: 43
+Broadcasting synchronization signal with counter: 44
+Broadcasting synchronization signal with counter: 45

@@ -1,0 +1,279 @@
+*** Booting nRF Connect SDK v2.7.0-5cb85570ca43 ***
+*** Using Zephyr OS v3.6.99-100befc70c74 ***
+Starting Bluetooth SYNC Listener with Name Rotation
+[00:00:00.385,803] [0m<inf> bt_hci_core: hci_vs_init: HW Platform: Nordic Semiconductor (0x0002)[0m
+[00:00:00.385,833] [0m<inf> bt_hci_core: hci_vs_init: HW Variant: nRF52x (0x0002)[0m
+[00:00:00.385,864] [0m<inf> bt_hci_core: hci_vs_init: Firmware: Standard Bluetooth controller (0x00) Version 3.6 Build 99[0m
+[00:00:00.386,566] [0m<inf> bt_hci_core: bt_dev_show_info: Identity: F8:D2:A2:75:BA:FC (random)[0m
+[00:00:00.386,596] [0m<inf> bt_hci_core: bt_dev_show_info: HCI: version 5.4 (0x0d) revision 0x0000, manufacturer 0x0059[0m
+[00:00:00.386,627] [0m<inf> bt_hci_core: bt_dev_show_info: LMP: version 5.4 (0x0d) subver 0xffff[0m
+Bluetooth initialized
+Scanning started
+[00:00:00] SYNC signal detected from 3C:10:39:57:63:79 (random), RSSI: -56, Sync Count: 1
+[00:00:00.436,737] [1;31m<err> bt_adv: bt_le_adv_stop: No valid legacy adv[0m
+Rotated to device name: Iris7_1
+Ignoring duplicate SYNC signal (debounced)
+[00:00:50] SYNC signal detected from 3C:10:39:57:63:79 (random), RSSI: -61, Sync Count: 1
+Rotated to device name: Iris7_2
+Ignoring duplicate SYNC signal (debounced)
+[00:00:59] SYNC signal detected from 0D:E3:F8:8E:23:7B (random), RSSI: -56, Sync Count: 2
+Rotated to device name: Iris7_3
+Ignoring duplicate SYNC signal (debounced)
+[00:01:49] SYNC signal detected from 0D:E3:F8:8E:23:7B (random), RSSI: -56, Sync Count: 2
+Rotated to device name: Iris7_4
+Ignoring duplicate SYNC signal (debounced)
+[00:01:59] SYNC signal detected from 03:3C:71:B3:DA:D6 (random), RSSI: -56, Sync Count: 3
+Rotated to device name: Iris7_5
+Ignoring duplicate SYNC signal (debounced)
+[00:02:49] SYNC signal detected from 03:3C:71:B3:DA:D6 (random), RSSI: -63, Sync Count: 3
+Rotated to device name: Iris7_6
+Ignoring duplicate SYNC signal (debounced)
+[00:02:59] SYNC signal detected from 3F:80:D0:CA:0B:9F (random), RSSI: -56, Sync Count: 4
+Rotated to device name: Iris7_7
+Ignoring duplicate SYNC signal (debounced)
+[00:03:49] SYNC signal detected from 3F:80:D0:CA:0B:9F (random), RSSI: -63, Sync Count: 4
+Rotated to device name: Iris7_8
+Ignoring duplicate SYNC signal (debounced)
+[00:03:59] SYNC signal detected from 05:1A:F0:A7:06:BC (random), RSSI: -63, Sync Count: 5
+Rotated to device name: Iris7_9
+Ignoring duplicate SYNC signal (debounced)
+[00:04:49] SYNC signal detected from 05:1A:F0:A7:06:BC (random), RSSI: -60, Sync Count: 5
+Rotated to device name: Iris7_10
+Ignoring duplicate SYNC signal (debounced)
+[00:04:59] SYNC signal detected from 0F:CF:A7:04:18:57 (random), RSSI: -63, Sync Count: 6
+Rotated to device name: Iris7_11
+Ignoring duplicate SYNC signal (debounced)
+[00:05:49] SYNC signal detected from 0F:CF:A7:04:18:57 (random), RSSI: -60, Sync Count: 6
+Rotated to device name: Iris7_12
+Ignoring duplicate SYNC signal (debounced)
+[00:05:59] SYNC signal detected from 31:91:45:AF:DC:C5 (random), RSSI: -63, Sync Count: 7
+Rotated to device name: Iris7_13
+Ignoring duplicate SYNC signal (debounced)
+[00:06:49] SYNC signal detected from 31:91:45:AF:DC:C5 (random), RSSI: -56, Sync Count: 7
+Rotated to device name: Iris7_14
+Ignoring duplicate SYNC signal (debounced)
+[00:06:59] SYNC signal detected from 2C:4E:01:DC:EF:6F (random), RSSI: -56, Sync Count: 8
+Rotated to device name: Iris7_15
+Ignoring duplicate SYNC signal (debounced)
+[00:07:49] SYNC signal detected from 2C:4E:01:DC:EF:6F (random), RSSI: -56, Sync Count: 8
+Rotated to device name: Iris7_16
+Ignoring duplicate SYNC signal (debounced)
+[00:07:59] SYNC signal detected from 00:F4:73:26:D9:5A (random), RSSI: -56, Sync Count: 9
+Rotated to device name: Iris7_17
+Ignoring duplicate SYNC signal (debounced)
+[00:08:49] SYNC signal detected from 00:F4:73:26:D9:5A (random), RSSI: -56, Sync Count: 9
+Rotated to device name: Iris7_18
+Ignoring duplicate SYNC signal (debounced)
+[00:08:59] SYNC signal detected from 0B:E4:98:D4:12:BA (random), RSSI: -60, Sync Count: 10
+Rotated to device name: Iris7_19
+Ignoring duplicate SYNC signal (debounced)
+[00:09:49] SYNC signal detected from 0B:E4:98:D4:12:BA (random), RSSI: -63, Sync Count: 10
+Rotated to device name: Iris7_20
+Ignoring duplicate SYNC signal (debounced)
+[00:09:59] SYNC signal detected from 27:13:0A:CF:2C:44 (random), RSSI: -56, Sync Count: 11
+Rotated to device name: Iris7_21
+Ignoring duplicate SYNC signal (debounced)
+[00:10:50] SYNC signal detected from 27:13:0A:CF:2C:44 (random), RSSI: -61, Sync Count: 11
+Rotated to device name: Iris7_22
+Ignoring duplicate SYNC signal (debounced)
+[00:11:00] SYNC signal detected from 16:01:30:16:F6:2C (random), RSSI: -58, Sync Count: 12
+Rotated to device name: Iris7_23
+Ignoring duplicate SYNC signal (debounced)
+[00:11:50] SYNC signal detected from 16:01:30:16:F6:2C (random), RSSI: -56, Sync Count: 12
+Rotated to device name: Iris7_24
+Ignoring duplicate SYNC signal (debounced)
+[00:12:00] SYNC signal detected from 39:82:C8:7E:1B:06 (random), RSSI: -56, Sync Count: 13
+Rotated to device name: Iris7_25
+Ignoring duplicate SYNC signal (debounced)
+[00:12:50] SYNC signal detected from 39:82:C8:7E:1B:06 (random), RSSI: -63, Sync Count: 13
+Rotated to device name: Iris7_26
+Ignoring duplicate SYNC signal (debounced)
+[00:13:00] SYNC signal detected from 25:D4:F1:DC:AA:D8 (random), RSSI: -63, Sync Count: 14
+Rotated to device name: Iris7_27
+Ignoring duplicate SYNC signal (debounced)
+[00:13:50] SYNC signal detected from 25:D4:F1:DC:AA:D8 (random), RSSI: -63, Sync Count: 14
+Rotated to device name: Iris7_28
+Ignoring duplicate SYNC signal (debounced)
+[00:14:00] SYNC signal detected from 0C:38:EA:A2:03:3F (random), RSSI: -63, Sync Count: 15
+Rotated to device name: Iris7_29
+Ignoring duplicate SYNC signal (debounced)
+[00:14:50] SYNC signal detected from 0C:38:EA:A2:03:3F (random), RSSI: -62, Sync Count: 15
+Rotated to device name: Iris7_30
+Ignoring duplicate SYNC signal (debounced)
+[00:15:00] SYNC signal detected from 1C:58:A0:38:9A:91 (random), RSSI: -61, Sync Count: 16
+Rotated to device name: Iris7_31
+Ignoring duplicate SYNC signal (debounced)
+[00:15:50] SYNC signal detected from 1C:58:A0:38:9A:91 (random), RSSI: -63, Sync Count: 16
+Rotated to device name: Iris7_32
+Ignoring duplicate SYNC signal (debounced)
+[00:16:00] SYNC signal detected from 06:65:2D:F8:92:C7 (random), RSSI: -56, Sync Count: 17
+Rotated to device name: Iris7_33
+Ignoring duplicate SYNC signal (debounced)
+[00:16:50] SYNC signal detected from 06:65:2D:F8:92:C7 (random), RSSI: -61, Sync Count: 17
+Rotated to device name: Iris7_34
+Ignoring duplicate SYNC signal (debounced)
+[00:17:00] SYNC signal detected from 24:A4:18:59:4A:0C (random), RSSI: -56, Sync Count: 18
+Rotated to device name: Iris7_35
+Ignoring duplicate SYNC signal (debounced)
+[00:17:50] SYNC signal detected from 24:A4:18:59:4A:0C (random), RSSI: -61, Sync Count: 18
+Rotated to device name: Iris7_36
+Ignoring duplicate SYNC signal (debounced)
+[00:18:00] SYNC signal detected from 21:11:89:A6:02:25 (random), RSSI: -56, Sync Count: 19
+Rotated to device name: Iris7_37
+Ignoring duplicate SYNC signal (debounced)
+[00:18:50] SYNC signal detected from 21:11:89:A6:02:25 (random), RSSI: -63, Sync Count: 19
+Rotated to device name: Iris7_38
+Ignoring duplicate SYNC signal (debounced)
+[00:19:00] SYNC signal detected from 01:DC:7F:92:C6:EB (random), RSSI: -63, Sync Count: 20
+Rotated to device name: Iris7_39
+Ignoring duplicate SYNC signal (debounced)
+[00:19:51] SYNC signal detected from 01:DC:7F:92:C6:EB (random), RSSI: -63, Sync Count: 20
+Rotated to device name: Iris7_40
+Ignoring duplicate SYNC signal (debounced)
+[00:20:01] SYNC signal detected from 18:AC:EC:CC:E5:95 (random), RSSI: -63, Sync Count: 21
+Rotated to device name: Iris7_41
+Ignoring duplicate SYNC signal (debounced)
+[00:20:51] SYNC signal detected from 18:AC:EC:CC:E5:95 (random), RSSI: -57, Sync Count: 21
+Rotated to device name: Iris7_42
+Ignoring duplicate SYNC signal (debounced)
+[00:21:01] SYNC signal detected from 38:F6:FD:9A:40:C4 (random), RSSI: -63, Sync Count: 22
+Rotated to device name: Iris7_43
+Ignoring duplicate SYNC signal (debounced)
+[00:21:51] SYNC signal detected from 38:F6:FD:9A:40:C4 (random), RSSI: -56, Sync Count: 22
+Rotated to device name: Iris7_44
+Ignoring duplicate SYNC signal (debounced)
+[00:22:01] SYNC signal detected from 02:C1:34:85:04:1E (random), RSSI: -56, Sync Count: 23
+Rotated to device name: Iris7_45
+Ignoring duplicate SYNC signal (debounced)
+[00:22:51] SYNC signal detected from 02:C1:34:85:04:1E (random), RSSI: -61, Sync Count: 23
+Rotated to device name: Iris7_46
+Ignoring duplicate SYNC signal (debounced)
+[00:23:01] SYNC signal detected from 3F:BB:FF:E7:BA:0E (random), RSSI: -56, Sync Count: 24
+Rotated to device name: Iris7_47
+Ignoring duplicate SYNC signal (debounced)
+[00:23:51] SYNC signal detected from 3F:BB:FF:E7:BA:0E (random), RSSI: -56, Sync Count: 24
+Rotated to device name: Iris7_48
+Ignoring duplicate SYNC signal (debounced)
+[00:24:01] SYNC signal detected from 01:03:D3:EE:D3:BA (random), RSSI: -61, Sync Count: 25
+Rotated to device name: Iris7_49
+Ignoring duplicate SYNC signal (debounced)
+[00:24:51] SYNC signal detected from 01:03:D3:EE:D3:BA (random), RSSI: -63, Sync Count: 25
+Rotated to device name: Iris7_50
+Ignoring duplicate SYNC signal (debounced)
+[00:25:01] SYNC signal detected from 0E:75:79:8B:44:43 (random), RSSI: -56, Sync Count: 26
+Rotated to device name: Iris7_51
+Ignoring duplicate SYNC signal (debounced)
+[00:25:51] SYNC signal detected from 0E:75:79:8B:44:43 (random), RSSI: -55, Sync Count: 26
+Rotated to device name: Iris7_52
+Ignoring duplicate SYNC signal (debounced)
+[00:26:01] SYNC signal detected from 14:00:28:F2:DB:A4 (random), RSSI: -56, Sync Count: 27
+Rotated to device name: Iris7_53
+Ignoring duplicate SYNC signal (debounced)
+[00:26:51] SYNC signal detected from 14:00:28:F2:DB:A4 (random), RSSI: -63, Sync Count: 27
+Rotated to device name: Iris7_54
+Ignoring duplicate SYNC signal (debounced)
+[00:27:01] SYNC signal detected from 19:46:3A:C9:BA:B9 (random), RSSI: -61, Sync Count: 28
+Rotated to device name: Iris7_55
+Ignoring duplicate SYNC signal (debounced)
+[00:27:51] SYNC signal detected from 19:46:3A:C9:BA:B9 (random), RSSI: -61, Sync Count: 28
+Rotated to device name: Iris7_56
+Ignoring duplicate SYNC signal (debounced)
+[00:28:01] SYNC signal detected from 27:ED:2E:49:E0:EF (random), RSSI: -63, Sync Count: 29
+Rotated to device name: Iris7_57
+Ignoring duplicate SYNC signal (debounced)
+[00:28:51] SYNC signal detected from 27:ED:2E:49:E0:EF (random), RSSI: -63, Sync Count: 29
+Rotated to device name: Iris7_58
+Ignoring duplicate SYNC signal (debounced)
+[00:29:01] SYNC signal detected from 23:59:B0:9E:59:06 (random), RSSI: -56, Sync Count: 30
+Rotated to device name: Iris7_59
+Ignoring duplicate SYNC signal (debounced)
+[00:29:51] SYNC signal detected from 23:59:B0:9E:59:06 (random), RSSI: -61, Sync Count: 30
+Rotated to device name: Iris7_60
+Ignoring duplicate SYNC signal (debounced)
+[00:30:02] SYNC signal detected from 3F:01:27:13:CA:FA (random), RSSI: -61, Sync Count: 31
+Rotated to device name: Iris7_61
+Ignoring duplicate SYNC signal (debounced)
+[00:30:52] SYNC signal detected from 3F:01:27:13:CA:FA (random), RSSI: -56, Sync Count: 31
+Rotated to device name: Iris7_62
+Ignoring duplicate SYNC signal (debounced)
+[00:31:02] SYNC signal detected from 2F:47:EE:FC:5D:7B (random), RSSI: -56, Sync Count: 32
+Rotated to device name: Iris7_63
+Ignoring duplicate SYNC signal (debounced)
+[00:31:52] SYNC signal detected from 2F:47:EE:FC:5D:7B (random), RSSI: -56, Sync Count: 32
+Rotated to device name: Iris7_64
+Ignoring duplicate SYNC signal (debounced)
+[00:32:02] SYNC signal detected from 23:C9:75:27:DC:EA (random), RSSI: -61, Sync Count: 33
+Rotated to device name: Iris7_65
+Ignoring duplicate SYNC signal (debounced)
+[00:32:52] SYNC signal detected from 23:C9:75:27:DC:EA (random), RSSI: -61, Sync Count: 33
+Rotated to device name: Iris7_66
+Ignoring duplicate SYNC signal (debounced)
+[00:33:02] SYNC signal detected from 0C:DD:2E:EA:1E:2A (random), RSSI: -63, Sync Count: 34
+Rotated to device name: Iris7_67
+Ignoring duplicate SYNC signal (debounced)
+[00:33:52] SYNC signal detected from 0C:DD:2E:EA:1E:2A (random), RSSI: -61, Sync Count: 34
+Rotated to device name: Iris7_68
+Ignoring duplicate SYNC signal (debounced)
+[00:34:02] SYNC signal detected from 16:FA:0B:A3:64:B1 (random), RSSI: -63, Sync Count: 35
+Rotated to device name: Iris7_69
+Ignoring duplicate SYNC signal (debounced)
+[00:34:52] SYNC signal detected from 16:FA:0B:A3:64:B1 (random), RSSI: -56, Sync Count: 35
+Rotated to device name: Iris7_70
+Ignoring duplicate SYNC signal (debounced)
+[00:35:02] SYNC signal detected from 06:14:6F:71:F6:79 (random), RSSI: -56, Sync Count: 36
+Rotated to device name: Iris7_71
+Ignoring duplicate SYNC signal (debounced)
+[00:35:52] SYNC signal detected from 06:14:6F:71:F6:79 (random), RSSI: -63, Sync Count: 36
+Rotated to device name: Iris7_72
+Ignoring duplicate SYNC signal (debounced)
+[00:36:02] SYNC signal detected from 14:91:61:52:64:26 (random), RSSI: -56, Sync Count: 37
+Rotated to device name: Iris7_73
+Ignoring duplicate SYNC signal (debounced)
+[00:36:52] SYNC signal detected from 14:91:61:52:64:26 (random), RSSI: -63, Sync Count: 37
+Rotated to device name: Iris7_74
+Ignoring duplicate SYNC signal (debounced)
+[00:37:02] SYNC signal detected from 3B:94:8F:35:F2:43 (random), RSSI: -61, Sync Count: 38
+Rotated to device name: Iris7_75
+Ignoring duplicate SYNC signal (debounced)
+[00:37:52] SYNC signal detected from 3B:94:8F:35:F2:43 (random), RSSI: -60, Sync Count: 38
+Rotated to device name: Iris7_76
+Ignoring duplicate SYNC signal (debounced)
+[00:38:02] SYNC signal detected from 36:FA:C5:AA:E5:03 (random), RSSI: -63, Sync Count: 39
+Rotated to device name: Iris7_77
+Ignoring duplicate SYNC signal (debounced)
+[00:38:52] SYNC signal detected from 36:FA:C5:AA:E5:03 (random), RSSI: -61, Sync Count: 39
+Rotated to device name: Iris7_78
+Ignoring duplicate SYNC signal (debounced)
+[00:39:02] SYNC signal detected from 1F:EC:52:E7:AB:8C (random), RSSI: -60, Sync Count: 40
+Rotated to device name: Iris7_79
+Ignoring duplicate SYNC signal (debounced)
+[00:39:52] SYNC signal detected from 1F:EC:52:E7:AB:8C (random), RSSI: -56, Sync Count: 40
+Rotated to device name: Iris7_80
+Ignoring duplicate SYNC signal (debounced)
+[00:40:03] SYNC signal detected from 3F:05:81:2B:17:50 (random), RSSI: -56, Sync Count: 41
+Rotated to device name: Iris7_81
+Ignoring duplicate SYNC signal (debounced)
+[00:40:53] SYNC signal detected from 3F:05:81:2B:17:50 (random), RSSI: -63, Sync Count: 41
+Rotated to device name: Iris7_82
+Ignoring duplicate SYNC signal (debounced)
+[00:41:03] SYNC signal detected from 08:6C:E3:B0:AB:7A (random), RSSI: -63, Sync Count: 42
+Rotated to device name: Iris7_83
+Ignoring duplicate SYNC signal (debounced)
+[00:41:53] SYNC signal detected from 08:6C:E3:B0:AB:7A (random), RSSI: -61, Sync Count: 42
+Rotated to device name: Iris7_84
+Ignoring duplicate SYNC signal (debounced)
+[00:42:03] SYNC signal detected from 0F:2A:63:B9:77:F6 (random), RSSI: -56, Sync Count: 43
+Rotated to device name: Iris7_85
+Ignoring duplicate SYNC signal (debounced)
+[00:42:53] SYNC signal detected from 0F:2A:63:B9:77:F6 (random), RSSI: -63, Sync Count: 43
+Rotated to device name: Iris7_86
+Ignoring duplicate SYNC signal (debounced)
+[00:43:03] SYNC signal detected from 14:5A:18:2A:03:2C (random), RSSI: -61, Sync Count: 44
+Rotated to device name: Iris7_87
+Ignoring duplicate SYNC signal (debounced)
+[00:43:53] SYNC signal detected from 14:5A:18:2A:03:2C (random), RSSI: -56, Sync Count: 44
+Rotated to device name: Iris7_88
+Ignoring duplicate SYNC signal (debounced)
+[00:44:03] SYNC signal detected from 1B:97:84:08:4D:B7 (random), RSSI: -63, Sync Count: 45
+Rotated to device name: Iris7_89
+Ignoring duplicate SYNC signal (debounced)
