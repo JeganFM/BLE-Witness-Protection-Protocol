@@ -1,0 +1,247 @@
+*** Booting nRF Connect SDK v2.7.0-5cb85570ca43 ***
+*** Using Zephyr OS v3.6.99-100befc70c74 ***
+Starting Bluetooth SYNC Listener with Name Rotation
+[00:00:00.397,735] [0m<inf> bt_hci_core: hci_vs_init: HW Platform: Nordic Semiconductor (0x0002)[0m
+[00:00:00.397,766] [0m<inf> bt_hci_core: hci_vs_init: HW Variant: nRF52x (0x0002)[0m
+[00:00:00.397,796] [0m<inf> bt_hci_core: hci_vs_init: Firmware: Standard Bluetooth controller (0x00) Version 3.6 Build 99[0m
+[00:00:00.398,498] [0m<inf> bt_hci_core: bt_dev_show_info: Identity: C2:92:20:98:36:2E (random)[0m
+[00:00:00.398,529] [0m<inf> bt_hci_core: bt_dev_show_info: HCI: version 5.4 (0x0d) revision 0x0000, manufacturer 0x0059[0m
+[00:00:00.398,559] [0m<inf> bt_hci_core: bt_dev_show_info: LMP: version 5.4 (0x0d) subver 0xffff[0m
+Bluetooth initialized
+Scanning started
+[00:00:00] SYNC signal detected from 2C:E6:7F:03:84:49 (random), RSSI: -45, Sync Count: 1
+[00:00:00.421,081] [1;31m<err> bt_adv: bt_le_adv_stop: No valid legacy adv[0m
+[00:00:00] Rotated to device name: Iris6_1
+No Iris devices found in this rotation.
+Ignoring duplicate SYNC signal (debounced)
+[00:00:54] SYNC signal detected from 17:09:C4:B7:9C:5D (random), RSSI: -45, Sync Count: 2
+[00:00:54] Rotated to device name: Iris6_2
+[00:00:00] Iris device found: Iris9_1, RSSI: -61
+[00:00:00] Iris device found: Iris7_1, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:01:54] SYNC signal detected from 3C:D0:E9:E1:F0:40 (random), RSSI: -45, Sync Count: 3
+[00:01:54] Rotated to device name: Iris6_3
+[00:00:54] Iris device found: Iris9_2, RSSI: -55
+[00:00:54] Iris device found: Iris7_2, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:02:54] SYNC signal detected from 00:C6:EA:79:FB:A4 (random), RSSI: -46, Sync Count: 4
+[00:02:54] Rotated to device name: Iris6_4
+[00:01:54] Iris device found: Iris9_3, RSSI: -55
+[00:01:54] Iris device found: Iris7_3, RSSI: -57
+[00:02:10] Iris device found: Iris7_37, RSSI: -67
+[00:02:30] Iris device found: Iris9_37, RSSI: -55
+Ignoring duplicate SYNC signal (debounced)
+[00:03:54] SYNC signal detected from 1C:9A:4A:F1:69:6F (random), RSSI: -46, Sync Count: 5
+[00:03:54] Rotated to device name: Iris6_5
+[00:02:54] Iris device found: Iris9_3, RSSI: -55
+[00:02:54] Iris device found: Iris7_4, RSSI: -67
+[00:02:54] Iris device found: Iris9_4, RSSI: -62
+[00:02:55] Iris device found: Iris9_47, RSSI: -61
+[00:02:56] Iris device found: Iris7_47, RSSI: -57
+Ignoring duplicate SYNC signal (debounced)
+[00:04:54] SYNC signal detected from 2F:AD:60:29:09:32 (random), RSSI: -57, Sync Count: 6
+[00:04:54] Rotated to device name: Iris6_6
+[00:03:54] Iris device found: Iris9_5, RSSI: -55
+[00:03:54] Iris device found: Iris7_5, RSSI: -57
+[00:04:02] Iris device found: Iris9_57, RSSI: -55
+[00:04:03] Iris device found: Iris7_57, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:05:54] SYNC signal detected from 35:24:AB:35:AF:6B (random), RSSI: -57, Sync Count: 7
+[00:05:54] Rotated to device name: Iris6_7
+[00:04:54] Iris device found: Iris9_6, RSSI: -66
+[00:04:54] Iris device found: Iris7_6, RSSI: -67
+[00:05:02] Iris device found: Iris9_67, RSSI: -55
+[00:05:09] Iris device found: Iris7_67, RSSI: -63
+Ignoring duplicate SYNC signal (debounced)
+[00:06:54] SYNC signal detected from 39:B4:60:94:5D:BF (random), RSSI: -46, Sync Count: 8
+[00:06:54] Rotated to device name: Iris6_8
+[00:05:54] Iris device found: Iris7_7, RSSI: -67
+[00:05:54] Iris device found: Iris9_7, RSSI: -61
+[00:05:57] Iris device found: Iris9_77, RSSI: -55
+[00:06:17] Iris device found: Iris7_77, RSSI: -63
+Ignoring duplicate SYNC signal (debounced)
+[00:07:54] SYNC signal detected from 39:CD:D7:0C:39:6B (random), RSSI: -45, Sync Count: 9
+[00:07:54] Rotated to device name: Iris6_9
+[00:06:54] Iris device found: Iris9_7, RSSI: -61
+[00:06:54] Iris device found: Iris7_8, RSSI: -67
+[00:06:54] Iris device found: Iris9_8, RSSI: -55
+[00:06:58] Iris device found: Iris7_87, RSSI: -67
+[00:07:14] Iris device found: Iris9_87, RSSI: -61
+Ignoring duplicate SYNC signal (debounced)
+[00:08:54] SYNC signal detected from 16:08:E9:4A:99:3E (random), RSSI: -46, Sync Count: 10
+[00:08:54] Rotated to device name: Iris6_10
+[00:07:54] Iris device found: Iris9_9, RSSI: -62
+[00:07:54] Iris device found: Iris7_9, RSSI: -57
+[00:08:26] Iris device found: Iris9_97, RSSI: -55
+[00:08:31] Iris device found: Iris7_97, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:09:54] SYNC signal detected from 10:1C:45:11:0D:32 (random), RSSI: -47, Sync Count: 11
+[00:09:54] Rotated to device name: Iris6_11
+[00:08:54] Iris device found: Iris7_10, RSSI: -67
+[00:08:54] Iris device found: Iris9_10, RSSI: -62
+Ignoring duplicate SYNC signal (debounced)
+[00:10:55] SYNC signal detected from 0F:85:D3:3F:44:CC (random), RSSI: -45, Sync Count: 12
+[00:10:55] Rotated to device name: Iris6_12
+[00:09:55] Iris device found: Iris9_11, RSSI: -61
+[00:09:55] Iris device found: Iris7_11, RSSI: -63
+Ignoring duplicate SYNC signal (debounced)
+[00:11:55] SYNC signal detected from 1A:3F:EF:8C:63:2F (random), RSSI: -48, Sync Count: 13
+[00:11:55] Rotated to device name: Iris6_13
+[00:10:55] Iris device found: Iris9_11, RSSI: -55
+[00:10:55] Iris device found: Iris7_12, RSSI: -56
+[00:10:55] Iris device found: Iris9_12, RSSI: -55
+Ignoring duplicate SYNC signal (debounced)
+[00:12:55] SYNC signal detected from 2A:40:5D:4D:F9:66 (random), RSSI: -46, Sync Count: 14
+[00:12:55] Rotated to device name: Iris6_14
+[00:11:55] Iris device found: Iris9_12, RSSI: -66
+[00:11:55] Iris device found: Iris7_13, RSSI: -57
+[00:11:55] Iris device found: Iris9_13, RSSI: -62
+Ignoring duplicate SYNC signal (debounced)
+[00:13:55] SYNC signal detected from 30:EE:14:43:39:A4 (random), RSSI: -57, Sync Count: 15
+[00:13:55] Rotated to device name: Iris6_15
+[00:12:55] Iris device found: Iris9_13, RSSI: -55
+[00:12:55] Iris device found: Iris7_14, RSSI: -57
+[00:12:55] Iris device found: Iris9_14, RSSI: -66
+Ignoring duplicate SYNC signal (debounced)
+[00:14:55] SYNC signal detected from 24:AD:09:98:25:90 (random), RSSI: -45, Sync Count: 16
+[00:14:55] Rotated to device name: Iris6_16
+[00:13:55] Iris device found: Iris9_15, RSSI: -55
+[00:13:55] Iris device found: Iris7_15, RSSI: -63
+Ignoring duplicate SYNC signal (debounced)
+[00:15:55] SYNC signal detected from 3E:74:5B:A4:E0:0B (random), RSSI: -45, Sync Count: 17
+[00:15:55] Rotated to device name: Iris6_17
+[00:14:55] Iris device found: Iris7_16, RSSI: -57
+[00:14:55] Iris device found: Iris9_16, RSSI: -61
+Ignoring duplicate SYNC signal (debounced)
+[00:16:55] SYNC signal detected from 2C:9F:5B:5D:47:97 (random), RSSI: -44, Sync Count: 18
+[00:16:55] Rotated to device name: Iris6_18
+[00:15:55] Iris device found: Iris7_17, RSSI: -57
+[00:15:55] Iris device found: Iris9_17, RSSI: -66
+Ignoring duplicate SYNC signal (debounced)
+[00:17:55] SYNC signal detected from 1D:C0:7F:58:87:04 (random), RSSI: -57, Sync Count: 19
+[00:17:55] Rotated to device name: Iris6_19
+[00:16:55] Iris device found: Iris9_18, RSSI: -61
+[00:16:55] Iris device found: Iris7_18, RSSI: -56
+Ignoring duplicate SYNC signal (debounced)
+[00:18:55] SYNC signal detected from 2C:A0:13:1A:C6:29 (random), RSSI: -45, Sync Count: 20
+[00:18:55] Rotated to device name: Iris6_20
+[00:17:55] Iris device found: Iris7_19, RSSI: -63
+[00:17:55] Iris device found: Iris9_19, RSSI: -62
+Ignoring duplicate SYNC signal (debounced)
+[00:19:55] SYNC signal detected from 26:56:59:0D:B7:B0 (random), RSSI: -57, Sync Count: 21
+[00:19:55] Rotated to device name: Iris6_21
+[00:18:55] Iris device found: Iris9_20, RSSI: -61
+[00:18:55] Iris device found: Iris7_20, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:20:56] SYNC signal detected from 2A:48:AD:FF:02:C3 (random), RSSI: -45, Sync Count: 22
+[00:20:56] Rotated to device name: Iris6_22
+[00:19:56] Iris device found: Iris9_20, RSSI: -55
+[00:19:56] Iris device found: Iris7_20, RSSI: -67
+[00:19:56] Iris device found: Iris7_21, RSSI: -63
+[00:19:56] Iris device found: Iris9_21, RSSI: -61
+Ignoring duplicate SYNC signal (debounced)
+[00:21:56] SYNC signal detected from 25:68:AF:F3:43:69 (random), RSSI: -57, Sync Count: 23
+[00:21:56] Rotated to device name: Iris6_23
+[00:20:56] Iris device found: Iris7_21, RSSI: -57
+[00:20:56] Iris device found: Iris9_22, RSSI: -66
+[00:20:56] Iris device found: Iris7_22, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:22:56] SYNC signal detected from 1F:A7:FC:F3:8C:B5 (random), RSSI: -45, Sync Count: 24
+[00:22:56] Rotated to device name: Iris6_24
+[00:21:56] Iris device found: Iris7_22, RSSI: -57
+[00:21:56] Iris device found: Iris9_23, RSSI: -55
+[00:21:56] Iris device found: Iris7_23, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:23:56] SYNC signal detected from 24:74:05:4B:CD:2C (random), RSSI: -45, Sync Count: 25
+[00:23:56] Rotated to device name: Iris6_25
+[00:22:56] Iris device found: Iris9_24, RSSI: -66
+[00:22:56] Iris device found: Iris7_24, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:24:56] SYNC signal detected from 31:2C:6A:D4:27:87 (random), RSSI: -45, Sync Count: 26
+[00:24:56] Rotated to device name: Iris6_26
+[00:23:56] Iris device found: Iris7_25, RSSI: -57
+[00:23:56] Iris device found: Iris9_25, RSSI: -66
+Ignoring duplicate SYNC signal (debounced)
+[00:25:56] SYNC signal detected from 3D:EA:BD:F4:E2:57 (random), RSSI: -57, Sync Count: 27
+[00:25:56] Rotated to device name: Iris6_27
+[00:24:56] Iris device found: Iris7_26, RSSI: -62
+[00:24:56] Iris device found: Iris9_26, RSSI: -55
+Ignoring duplicate SYNC signal (debounced)
+[00:26:56] SYNC signal detected from 39:EF:E0:5C:E1:3D (random), RSSI: -57, Sync Count: 28
+[00:26:56] Rotated to device name: Iris6_28
+[00:25:56] Iris device found: Iris9_26, RSSI: -61
+[00:25:56] Iris device found: Iris7_26, RSSI: -56
+[00:25:56] Iris device found: Iris9_27, RSSI: -61
+[00:25:56] Iris device found: Iris7_27, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:27:56] SYNC signal detected from 10:EA:00:06:EC:9D (random), RSSI: -46, Sync Count: 29
+[00:27:56] Rotated to device name: Iris6_29
+[00:26:56] Iris device found: Iris9_28, RSSI: -62
+[00:26:56] Iris device found: Iris7_28, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:28:56] SYNC signal detected from 3E:AE:35:8F:EA:30 (random), RSSI: -57, Sync Count: 30
+[00:28:56] Rotated to device name: Iris6_30
+[00:27:56] Iris device found: Iris7_28, RSSI: -57
+[00:27:56] Iris device found: Iris9_29, RSSI: -55
+[00:27:56] Iris device found: Iris7_29, RSSI: -67
+Ignoring duplicate SYNC signal (debounced)
+[00:29:56] SYNC signal detected from 0C:82:0C:10:A3:49 (random), RSSI: -45, Sync Count: 31
+[00:29:56] Rotated to device name: Iris6_31
+[00:28:56] Iris device found: Iris9_30, RSSI: -61
+[00:28:56] Iris device found: Iris7_30, RSSI: -63
+Ignoring duplicate SYNC signal (debounced)
+[00:30:57] SYNC signal detected from 38:0B:9F:40:8D:E9 (random), RSSI: -45, Sync Count: 32
+[00:30:57] Rotated to device name: Iris6_32
+[00:29:56] Iris device found: Iris9_30, RSSI: -66
+[00:29:57] Iris device found: Iris7_30, RSSI: -57
+[00:29:57] Iris device found: Iris7_31, RSSI: -63
+[00:29:57] Iris device found: Iris9_31, RSSI: -66
+Ignoring duplicate SYNC signal (debounced)
+[00:31:57] SYNC signal detected from 2D:79:22:11:B5:59 (random), RSSI: -44, Sync Count: 33
+[00:31:57] Rotated to device name: Iris6_33
+[00:30:57] Iris device found: Iris9_32, RSSI: -55
+[00:30:57] Iris device found: Iris7_31, RSSI: -57
+[00:30:57] Iris device found: Iris7_32, RSSI: -63
+Ignoring duplicate SYNC signal (debounced)
+[00:32:57] SYNC signal detected from 22:BB:C0:DF:F0:CD (random), RSSI: -45, Sync Count: 34
+[00:32:57] Rotated to device name: Iris6_34
+[00:31:57] Iris device found: Iris7_33, RSSI: -57
+[00:31:57] Iris device found: Iris9_33, RSSI: -55
+Ignoring duplicate SYNC signal (debounced)
+[00:33:57] SYNC signal detected from 28:9F:02:DC:4B:44 (random), RSSI: -45, Sync Count: 35
+[00:33:57] Rotated to device name: Iris6_35
+[00:32:57] Iris device found: Iris7_34, RSSI: -57
+[00:32:57] Iris device found: Iris9_34, RSSI: -55
+Ignoring duplicate SYNC signal (debounced)
+[00:34:57] SYNC signal detected from 3F:4A:54:96:75:3B (random), RSSI: -45, Sync Count: 36
+[00:34:57] Rotated to device name: Iris6_36
+[00:33:57] Iris device found: Iris9_35, RSSI: -66
+[00:33:57] Iris device found: Iris7_35, RSSI: -63
+Ignoring duplicate SYNC signal (debounced)
+[00:35:57] SYNC signal detected from 35:74:BC:58:B0:C3 (random), RSSI: -45, Sync Count: 37
+[00:35:57] Rotated to device name: Iris6_37
+[00:34:57] Iris device found: Iris7_36, RSSI: -67
+[00:34:57] Iris device found: Iris9_36, RSSI: -61
+Ignoring duplicate SYNC signal (debounced)
+[00:36:57] SYNC signal detected from 35:96:E2:76:44:78 (random), RSSI: -45, Sync Count: 38
+[00:36:57] Rotated to device name: Iris6_38
+[00:35:57] Iris device found: Iris7_37, RSSI: -57
+[00:35:57] Iris device found: Iris9_37, RSSI: -66
+Ignoring duplicate SYNC signal (debounced)
+[00:37:57] SYNC signal detected from 16:D1:8A:B5:2C:FC (random), RSSI: -46, Sync Count: 39
+[00:37:57] Rotated to device name: Iris6_39
+[00:36:57] Iris device found: Iris7_38, RSSI: -57
+[00:36:57] Iris device found: Iris9_38, RSSI: -61
+Ignoring duplicate SYNC signal (debounced)
+[00:38:57] SYNC signal detected from 23:FD:94:43:69:21 (random), RSSI: -45, Sync Count: 40
+[00:38:57] Rotated to device name: Iris6_40
+[00:37:57] Iris device found: Iris9_39, RSSI: -61
+[00:37:57] Iris device found: Iris7_39, RSSI: -65
+Ignoring duplicate SYNC signal (debounced)
+[00:39:57] SYNC signal detected from 05:90:D8:2D:BD:B0 (random), RSSI: -45, Sync Count: 41
+[00:39:57] Rotated to device name: Iris6_41
+[00:38:57] Iris device found: Iris7_39, RSSI: -56
+[00:38:57] Iris device found: Iris9_39, RSSI: -66
+[00:38:58] Iris device found: Iris9_40, RSSI: -61
+[00:38:58] Iris device found: Iris7_40, RSSI: -57
+Ignoring duplicate SYNC signal (debounced)
