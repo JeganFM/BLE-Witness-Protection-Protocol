@@ -1,0 +1,162 @@
+*** Booting nRF Connect SDK v2.7.99-5afa4855425c ***
+*** Using Zephyr OS v3.6.99-c784caa9b325 ***
+Starting Bluetooth device name rotation at fixed intervals for Test 2
+[00:00:00.389,892] [0m<inf> bt_hci_core: HW Platform: Nordic Semiconductor (0x0002)[0m
+[00:00:00.389,923] [0m<inf> bt_hci_core: HW Variant: nRF52x (0x0002)[0m
+[00:00:00.389,953] [0m<inf> bt_hci_core: Firmware: Standard Bluetooth controller (0x00) Version 3.6 Build 99[0m
+[00:00:00.390,686] [0m<inf> bt_hci_core: Identity: C2:92:20:98:36:2E (random)[0m
+[00:00:00.390,716] [0m<inf> bt_hci_core: HCI: version 5.4 (0x0d) revision 0x0000, manufacturer 0x0059[0m
+[00:00:00.390,747] [0m<inf> bt_hci_core: LMP: version 5.4 (0x0d) subver 0xffff[0m
+Bluetooth initialized
+[00:00:00] Test 2: Rotating to device name: Iris6_001
+Waiting for 60000 ms before changing identity
+[00:01:00] Test 2: Rotating to device name: Iris6_002
+Waiting for 60000 ms before changing identity
+[00:02:00] Test 2: Rotating to device name: Iris6_003
+Waiting for 60000 ms before changing identity
+[00:03:00] Test 2: Rotating to device name: Iris6_004
+Waiting for 60000 ms before changing identity
+[00:04:00] Test 2: Rotating to device name: Iris6_005
+Waiting for 60000 ms before changing identity
+[00:05:00] Test 2: Rotating to device name: Iris6_006
+Waiting for 60000 ms before changing identity
+[00:06:00] Test 2: Rotating to device name: Iris6_007
+Waiting for 60000 ms before changing identity
+[00:07:00] Test 2: Rotating to device name: Iris6_008
+Waiting for 60000 ms before changing identity
+[00:08:00] Test 2: Rotating to device name: Iris6_009
+Waiting for 60000 ms before changing identity
+[00:09:00] Test 2: Rotating to device name: Iris6_010
+Waiting for 60000 ms before changing identity
+[00:10:00] Test 2: Rotating to device name: Iris6_011
+Waiting for 60000 ms before changing identity
+[00:11:00] Test 2: Rotating to device name: Iris6_012
+Waiting for 60000 ms before changing identity
+[00:12:00] Test 2: Rotating to device name: Iris6_013
+Waiting for 60000 ms before changing identity
+[00:13:00] Test 2: Rotating to device name: Iris6_014
+Waiting for 60000 ms before changing identity
+[00:14:00] Test 2: Rotating to device name: Iris6_015
+Waiting for 60000 ms before changing identity
+[00:15:00] Test 2: Rotating to device name: Iris6_016
+Waiting for 60000 ms before changing identity
+[00:16:00] Test 2: Rotating to device name: Iris6_017
+Waiting for 60000 ms before changing identity
+[00:17:00] Test 2: Rotating to device name: Iris6_018
+Waiting for 60000 ms before changing identity
+[00:18:00] Test 2: Rotating to device name: Iris6_019
+Waiting for 60000 ms before changing identity
+[00:19:00] Test 2: Rotating to device name: Iris6_020
+Waiting for 60000 ms before changing identity
+[00:20:00] Test 2: Rotating to device name: Iris6_021
+Waiting for 60000 ms before changing identity
+[00:21:00] Test 2: Rotating to device name: Iris6_022
+Waiting for 60000 ms before changing identity
+[00:22:00] Test 2: Rotating to device name: Iris6_023
+Waiting for 60000 ms before changing identity
+[00:23:00] Test 2: Rotating to device name: Iris6_024
+Waiting for 60000 ms before changing identity
+[00:24:00] Test 2: Rotating to device name: Iris6_025
+Waiting for 60000 ms before changing identity
+[00:25:00] Test 2: Rotating to device name: Iris6_026
+Waiting for 60000 ms before changing identity
+[00:26:00] Test 2: Rotating to device name: Iris6_027
+Waiting for 60000 ms before changing identity
+[00:27:00] Test 2: Rotating to device name: Iris6_028
+Waiting for 60000 ms before changing identity
+[00:28:00] Test 2: Rotating to device name: Iris6_029
+Waiting for 60000 ms before changing identity
+[00:29:00] Test 2: Rotating to device name: Iris6_030
+Waiting for 60000 ms before changing identity
+[00:30:00] Test 2: Rotating to device name: Iris6_031
+Waiting for 60000 ms before changing identity
+[00:31:00] Test 2: Rotating to device name: Iris6_032
+Waiting for 60000 ms before changing identity
+[00:32:00] Test 2: Rotating to device name: Iris6_033
+Waiting for 60000 ms before changing identity
+[00:33:00] Test 2: Rotating to device name: Iris6_034
+Waiting for 60000 ms before changing identity
+[00:34:00] Test 2: Rotating to device name: Iris6_035
+Waiting for 60000 ms before changing identity
+[00:35:00] Test 2: Rotating to device name: Iris6_036
+Waiting for 60000 ms before changing identity
+[00:36:00] Test 2: Rotating to device name: Iris6_037
+Waiting for 60000 ms before changing identity
+[00:37:00] Test 2: Rotating to device name: Iris6_038
+Waiting for 60000 ms before changing identity
+[00:38:00] Test 2: Rotating to device name: Iris6_039
+Waiting for 60000 ms before changing identity
+[00:39:00] Test 2: Rotating to device name: Iris6_040
+Waiting for 60000 ms before changing identity
+[00:40:00] Test 2: Rotating to device name: Iris6_041
+Waiting for 60000 ms before changing identity
+[00:41:00] Test 2: Rotating to device name: Iris6_042
+Waiting for 60000 ms before changing identity
+[00:42:00] Test 2: Rotating to device name: Iris6_043
+Waiting for 60000 ms before changing identity
+[00:43:00] Test 2: Rotating to device name: Iris6_044
+Waiting for 60000 ms before changing identity
+[00:44:00] Test 2: Rotating to device name: Iris6_045
+Waiting for 60000 ms before changing identity
+[00:45:00] Test 2: Rotating to device name: Iris6_046
+Waiting for 60000 ms before changing identity
+[00:46:00] Test 2: Rotating to device name: Iris6_047
+Waiting for 60000 ms before changing identity
+[00:47:00] Test 2: Rotating to device name: Iris6_048
+Waiting for 60000 ms before changing identity
+[00:48:00] Test 2: Rotating to device name: Iris6_049
+Waiting for 60000 ms before changing identity
+[00:49:00] Test 2: Rotating to device name: Iris6_050
+Waiting for 60000 ms before changing identity
+[00:50:00] Test 2: Rotating to device name: Iris6_051
+Waiting for 60000 ms before changing identity
+[00:51:00] Test 2: Rotating to device name: Iris6_052
+Waiting for 60000 ms before changing identity
+[00:52:00] Test 2: Rotating to device name: Iris6_053
+Waiting for 60000 ms before changing identity
+[00:53:00] Test 2: Rotating to device name: Iris6_054
+Waiting for 60000 ms before changing identity
+[00:54:00] Test 2: Rotating to device name: Iris6_055
+Waiting for 60000 ms before changing identity
+[00:55:00] Test 2: Rotating to device name: Iris6_056
+Waiting for 60000 ms before changing identity
+[00:56:00] Test 2: Rotating to device name: Iris6_057
+Waiting for 60000 ms before changing identity
+[00:57:00] Test 2: Rotating to device name: Iris6_058
+Waiting for 60000 ms before changing identity
+[00:58:00] Test 2: Rotating to device name: Iris6_059
+Waiting for 60000 ms before changing identity
+[00:59:00] Test 2: Rotating to device name: Iris6_060
+Waiting for 60000 ms before changing identity
+[01:00:00] Test 2: Rotating to device name: Iris6_061
+Waiting for 60000 ms before changing identity
+[01:01:00] Test 2: Rotating to device name: Iris6_062
+Waiting for 60000 ms before changing identity
+[01:02:00] Test 2: Rotating to device name: Iris6_063
+Waiting for 60000 ms before changing identity
+[01:03:00] Test 2: Rotating to device name: Iris6_064
+Waiting for 60000 ms before changing identity
+[01:04:00] Test 2: Rotating to device name: Iris6_065
+Waiting for 60000 ms before changing identity
+[01:05:00] Test 2: Rotating to device name: Iris6_066
+Waiting for 60000 ms before changing identity
+[01:06:00] Test 2: Rotating to device name: Iris6_067
+Waiting for 60000 ms before changing identity
+[01:07:00] Test 2: Rotating to device name: Iris6_068
+Waiting for 60000 ms before changing identity
+[01:08:00] Test 2: Rotating to device name: Iris6_069
+Waiting for 60000 ms before changing identity
+[01:09:00] Test 2: Rotating to device name: Iris6_070
+Waiting for 60000 ms before changing identity
+[01:10:00] Test 2: Rotating to device name: Iris6_071
+Waiting for 60000 ms before changing identity
+[01:11:00] Test 2: Rotating to device name: Iris6_072
+Waiting for 60000 ms before changing identity
+[01:12:00] Test 2: Rotating to device name: Iris6_073
+Waiting for 60000 ms before changing identity
+[01:13:00] Test 2: Rotating to device name: Iris6_074
+Waiting for 60000 ms before changing identity
+[01:14:00] Test 2: Rotating to device name: Iris6_075
+Waiting for 60000 ms before changing identity
+[01:15:00] Test 2: Rotating to device name: Iris6_076
+Waiting for 60000 ms before changing identity
