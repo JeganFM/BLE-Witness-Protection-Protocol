@@ -1,0 +1,17 @@
+*** Booting nRF Connect SDK v2.7.0-5cb85570ca43 ***
+*** Using Zephyr OS v3.6.99-100befc70c74 ***
+Starting Test 3: Random Interval Name Rotation with Timestamps
+[00:00:00.401,428] [0m<inf> bt_hci_core: hci_vs_init: HW Platform: Nordic Semiconductor (0x0002)[0m
+[00:00:00.401,458] [0m<inf> bt_hci_core: hci_vs_init: HW Variant: nRF52x (0x0002)[0m
+[00:00:00.401,489] [0m<inf> bt_hci_core: hci_vs_init: Firmware: Standard Bluetooth controller (0x00) Version 3.6 Build 99[0m
+[00:00:00.402,191] [0m<inf> bt_hci_core: bt_dev_show_info: Identity: D0:F9:4A:A4:87:79 (random)[0m
+[00:00:00.402,221] [0m<inf> bt_hci_core: bt_dev_show_info: HCI: version 5.4 (0x0d) revision 0x0000, manufacturer 0x0059[0m
+[00:00:00.402,252] [0m<inf> bt_hci_core: bt_dev_show_info: LMP: version 5.4 (0x0d) subver 0xffff[0m
+Bluetooth initialized
+[00:00:00.402,313] [1;31m<err> bt_adv: bt_le_adv_stop: No valid legacy adv[0m
+[00:00:00] Rotated to device name: Iris9_1
+[00:04:35] Rotated to device name: Iris9_2
+[00:07:58] Rotated to device name: Iris9_3
+[00:09:53] Rotated to device name: Iris9_4
+[00:14:21] Rotated to device name: Iris9_5
+[00:16:36] Rotated to device name: Iris9_6
