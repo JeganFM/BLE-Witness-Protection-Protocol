@@ -1,0 +1,54 @@
+*** Booting nRF Connect SDK v2.7.0-5cb85570ca43 ***
+*** Using Zephyr OS v3.6.99-100befc70c74 ***
+Starting Bluetooth SYNC Listener with Name Rotation
+[00:00:00.389,556] [0m<inf> bt_hci_core: hci_vs_init: HW Platform: Nordic Semiconductor (0x0002)[0m
+[00:00:00.389,587] [0m<inf> bt_hci_core: hci_vs_init: HW Variant: nRF52x (0x0002)[0m
+[00:00:00.389,617] [0m<inf> bt_hci_core: hci_vs_init: Firmware: Standard Bluetooth controller (0x00) Version 3.6 Build 99[0m
+[00:00:00.390,319] [0m<inf> bt_hci_core: bt_dev_show_info: Identity: F8:D2:A2:75:BA:FC (random)[0m
+[00:00:00.390,350] [0m<inf> bt_hci_core: bt_dev_show_info: HCI: version 5.4 (0x0d) revision 0x0000, manufacturer 0x0059[0m
+[00:00:00.390,380] [0m<inf> bt_hci_core: bt_dev_show_info: LMP: version 5.4 (0x0d) subver 0xffff[0m
+Bluetooth initialized
+Scanning started
+[00:00:00] SYNC signal detected from 29:A9:62:E3:98:36 (random), RSSI: -56, Sync Count: 1
+[00:00:00.470,947] [1;31m<err> bt_adv: bt_le_adv_stop: No valid legacy adv[0m
+[00:00:00] Rotated to device name: Iris7_1
+No Iris devices found in this rotation.
+Ignoring duplicate SYNC signal (debounced)
+[00:00:55] SYNC signal detected from 3F:1C:06:A4:BB:48 (random), RSSI: -61, Sync Count: 2
+[00:00:55] Rotated to device name: Iris7_2
+[00:00:00] Iris device found: Iris9_1, RSSI: -50
+[00:00:02] Iris device found: Iris6_1, RSSI: -64
+Ignoring duplicate SYNC signal (debounced)
+[00:01:55] SYNC signal detected from 20:2C:F0:2E:85:F3 (random), RSSI: -61, Sync Count: 3
+[00:01:55] Rotated to device name: Iris7_3
+[00:00:55] Iris device found: Iris6_2, RSSI: -55
+[00:00:55] Iris device found: Iris9_2, RSSI: -54
+Ignoring duplicate SYNC signal (debounced)
+[00:02:55] SYNC signal detected from 0F:BB:0C:4B:46:3F (random), RSSI: -61, Sync Count: 4
+[00:02:55] Rotated to device name: Iris7_4
+[00:01:55] Iris device found: Iris6_3, RSSI: -55
+[00:01:55] Iris device found: Iris9_3, RSSI: -47
+Ignoring duplicate SYNC signal (debounced)
+[00:03:55] SYNC signal detected from 36:8C:59:0B:51:FF (random), RSSI: -63, Sync Count: 5
+[00:03:55] Rotated to device name: Iris7_5
+[00:02:55] Iris device found: Iris9_4, RSSI: -51
+[00:02:55] Iris device found: Iris6_4, RSSI: -66
+Ignoring duplicate SYNC signal (debounced)
+[00:04:55] SYNC signal detected from 28:57:CC:EB:C5:93 (random), RSSI: -61, Sync Count: 6
+[00:04:55] Rotated to device name: Iris7_6
+[00:03:55] Iris device found: Iris9_5, RSSI: -54
+[00:03:55] Iris device found: Iris6_5, RSSI: -62
+[00:04:25] Iris device found: Iris9_51, RSSI: -48
+[00:04:30] Iris device found: Iris6_51, RSSI: -64
+Ignoring duplicate SYNC signal (debounced)
+*** Booting nRF Connect SDK v2.7.0-5cb85570ca43 ***
+*** Using Zephyr OS v3.6.99-100befc70c74 ***
+Starting Test 1: No Rotation (Broadcasting Only)
+[00:00:00.386,688] [0m<inf> bt_hci_core: hci_vs_init: HW Platform: Nordic Semiconductor (0x0002)[0m
+[00:00:00.386,718] [0m<inf> bt_hci_core: hci_vs_init: HW Variant: nRF52x (0x0002)[0m
+[00:00:00.386,749] [0m<inf> bt_hci_core: hci_vs_init: Firmware: Standard Bluetooth controller (0x00) Version 3.6 Build 99[0m
+[00:00:00.387,451] [0m<inf> bt_hci_core: bt_dev_show_info: Identity: F8:D2:A2:75:BA:FC (random)[0m
+[00:00:00.387,481] [0m<inf> bt_hci_core: bt_dev_show_info: HCI: version 5.4 (0x0d) revision 0x0000, manufacturer 0x0059[0m
+[00:00:00.387,512] [0m<inf> bt_hci_core: bt_dev_show_info: LMP: version 5.4 (0x0d) subver 0xffff[0m
+Bluetooth initialized
+Broadcasting with fixed name: Iris7_Static
