@@ -1,0 +1,19 @@
+# Zephyr / west build output (regenerable from source)
+build/
+build_*/
+*.elf
+*.o
+*.obj
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editors / OS
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+~WRL*.tmp
