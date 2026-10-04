@@ -83,7 +83,7 @@ Pre-built images are in each folder's `images/` directory and can be flashed dir
 
 ## About the dates in this repository
 
-This project was developed between **July and December 2024**. The repository was assembled in **October 2026** from the original working folders, and no file contents were altered to do so. Each commit is dated to the original last-modified time of the files it contains (UK time: BST until 27 Oct 2024, GMT after), so the history reflects when the work was actually done. Where the same file existed in several places, the earliest copy's timestamp was kept. [docs/provenance/MANIFEST.csv](docs/provenance/MANIFEST.csv) lists every file's original location, timestamp, and checksum. The README files and indexes were written at assembly time and carry the assembly date.
+This project was developed between **July and December 2024**. The repository was assembled in **October 2026** from the original working folders, and no file contents were altered to do so, apart from the privacy edits described under [Data handling](#data-handling). Each commit is dated to the original last-modified time of the files it contains (UK time: BST until 27 Oct 2024, GMT after), so the history reflects when the work was actually done. Where the same file existed in several places, the earliest copy's timestamp was kept. [docs/provenance/MANIFEST.csv](docs/provenance/MANIFEST.csv) lists every file's original location, timestamp, and checksum. The README files and indexes were written at assembly time and carry the assembly date.
 
 ## Data handling
 
