@@ -95,15 +95,11 @@ west flash
 
 The `.hex` files in each folder's `images/` directory are prebuilt outputs kept for convenience and can be flashed directly.
 
-## About the dates in this repository
-
-The project was developed between July and December 2024. This repository was assembled in October 2026 from the original working folders. Commit dates are the files' original last-modified times (UK time), not the assembly date. The README files, the data note and the technical report were written at assembly time and carry the later date. File contents are unchanged apart from the privacy edits below. [docs/provenance/MANIFEST.csv](docs/provenance/MANIFEST.csv) records each file's origin, timestamp and checksum.
-
 ## Data handling
 
 The passive observer (Iris5) records every BLE advertisement in range, which includes devices belonging to other people. For that reason the raw observer logs and the screen recordings of the test runs are **not published** in this repository. The graphs generated from them are included, along with the logs from the project's own nodes and the parsed datasets. See [DATA.md](DATA.md) for details.
 
-Local account names were also removed from a few file paths in the analysis scripts (now plain filenames, read from the working directory) and from the window titles in one screenshot. The affected files are marked in the manifest.
+Local account names were also removed from a few file paths in the analysis scripts (now plain filenames, read from the working directory) and from the window titles in one screenshot. The affected files are marked in [docs/provenance/MANIFEST.csv](docs/provenance/MANIFEST.csv), which also records each file's origin, original timestamp and checksum.
 
 ## License
 
