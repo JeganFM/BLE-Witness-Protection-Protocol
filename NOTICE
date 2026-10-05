@@ -1,0 +1,22 @@
+BLE Witness Protection Protocol
+Copyright 2024-2026 JeganFM
+
+This repository is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party material
+--------------------
+
+- firmware/00-early-prototypes/broadcaster-first-draft/main.c
+  Copyright (c) 2015-2016 Intel Corporation
+  SPDX-License-Identifier: Apache-2.0
+  The original license header is kept in the file.
+
+- The firmware in this repository was adapted from the Bluetooth Broadcaster
+  and Observer sample applications that ship with the nRF Connect SDK
+  (Nordic Semiconductor) and the Zephyr Project, which are provided under the
+  Apache License, Version 2.0. See https://github.com/nrfconnect/sdk-zephyr
+  and https://docs.nordicsemi.com/.
+
+- Zephyr RTOS and the nRF Connect SDK are not included in this repository.
+  Building the firmware requires installing them separately under their own
+  licenses.

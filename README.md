@@ -105,6 +105,10 @@ The passive observer (Iris5) records every BLE advertisement in range, which inc
 
 Local account names were also removed from a few file paths in the analysis scripts (now plain filenames, read from the working directory) and from the window titles in one screenshot. The affected files are marked in the manifest.
 
+## License
+
+Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE), which also credits the Intel, Nordic and Zephyr sample code that parts of the firmware were adapted from.
+
 ## Author
 
 **JeganFM**
