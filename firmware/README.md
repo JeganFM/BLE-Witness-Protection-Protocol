@@ -29,7 +29,7 @@ The folders reflect real iteration: several tests have multiple versions (`liste
 | `test5-hybrid-rotation/broadcaster-iris3-keyed` | `Yo_Broadcaster_2` | Key-management broadcaster: generates a random 16-byte (IRK-style) key, stores it with a version number in non-volatile storage (NVS), and rotates every 60 s. |
 | `test5-hybrid-rotation/broadcaster-iris3-encrypted` | `Yo_Broadcast_3` | **Final Test 5 broadcaster.** `SYNC` packet whose counter is obfuscated with a demonstration XOR key; logs the counter before and after encryption. |
 | `test5-hybrid-rotation/listener-aes-gcm-experiment` | `Final_Test_4_4` | Experiment: AES-GCM key handling (TinyCrypt) with the key stored via Zephyr settings/flash. |
-| `test5-hybrid-rotation/listener-final` | `Final_Test_4_5` | **Final Test 5 listener.** Hybrid: rotates on a decrypted `SYNC`, rotates on a 5-minute timer, and logs the peers it sees (the peer-triggered rotation shown in the Test 5 graph is not in this source). |
+| `test5-hybrid-rotation/listener-final` | `Final_Test_4_5` | **Final Test 5 listener.** Hybrid: rotates on a decrypted `SYNC`, rotates on a 5-minute timer, and rotates when it sees a peer's name change. |
 | `test5-hybrid-rotation/listener-iris7` | `Iris7` | Test 5 listener variant with shorter sync/rotation intervals. |
 | `test5-hybrid-rotation/aes-otp-broadcaster-draft` | `message.txt` | Draft of an AES / one-time-key broadcaster. |
 

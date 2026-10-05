@@ -126,15 +126,15 @@ A debounce rule decides whether to accept a `SYNC` with counter $n$ at time $t$.
 
 $$n \neq n_{\text{last}} \quad \text{or} \quad t - t_{\text{last}} \ge D$$
 
-The minimum gap $D$ is 300 s in the final Test 4 listener (a comment in the code still says 60 s) and 600 s in the Test 5 listener. An earlier Test 4 version used 50 s. Without the rule, duplicate copies of the same `SYNC` could trigger repeated rotations. The Test 5 listener also defines a 5 s `DEBOUNCE_INTERVAL_MS` that is not used.
+The minimum gap $D$ is 300 s in the final Test 4 listener (a comment in the code still says 60 s) and 600 s in the Test 5 listener. An earlier Test 4 version used 50 s. Without the rule, duplicate copies of the same `SYNC` could trigger repeated rotations. The Test 5 listener also defines a 5 s `DEBOUNCE_INTERVAL_MS`, which gates the peer-observation trigger below.
 
 ### Test 5: hybrid
 
-Test 5 combines three rotation triggers, and the code kept in this repository implements two of them.
+Test 5 combines three rotation triggers.
 
 1. **Sync.** The broadcaster sends a `SYNC` every 10 minutes whose counter is XOR-obfuscated. The listener decrypts it and, if the debounce rule accepts it, takes the decrypted counter as the number in its name.
 2. **Autonomous timer.** Every 5 minutes the listener rotates to the next counter, wrapping at 256. This timer is not reset by a `SYNC`, so it runs regardless and adds rotations on top of the synchronised ones. It is not a fallback that only starts when the `SYNC` is missing.
-3. **Peer observation.** The design has a listener rotate when it sees another listener rotate, and the Test 5 graph shows such rotations. The listener source kept here only logs the peers it sees, so the code for that trigger is not among the files in this repository.
+3. **Peer observation.** A listener rotates when it sees another listener's name change. A new peer name advances the local counter by one, gated by the same `DEBOUNCE_INTERVAL_MS`, so several peers rotating at once still produce one rotation.
 
 The obfuscation in the Test 5 broadcaster is a one-byte XOR with a fixed key:
 
@@ -182,7 +182,7 @@ These come from the observer's capture, which is not published (see [DATA.md](..
 
   ![Test 4](../results/test4/graphs/Test4_All_Devices.png)
 
-- **Test 5.** Over a 30-minute run the three triggers were visible separately: synchronised changes at the start and at 10 minutes, autonomous changes every 5 minutes, and peer-triggered changes in between. No rapid back-to-back rotations appear, which fits the debounce rule. The peer-triggered rotations are in the data, but as noted in section 5 the code for that trigger is not among the files kept in this repository. In the graph below, circles are sync-signal rotations, diamonds are peer-observed rotations and squares are autonomous rotations.
+- **Test 5.** Over a 30-minute run the three triggers were visible separately: synchronised changes at the start and at 10 minutes, autonomous changes every 5 minutes, and peer-triggered changes in between. No rapid back-to-back rotations appear, which fits the debounce rule. In the graph below, circles are sync-signal rotations, diamonds are peer-observed rotations and squares are autonomous rotations.
 
   ![Test 5](../results/plotly-exports/newplot-20241208-060345.png)
 
@@ -198,7 +198,7 @@ These come from the observer's capture, which is not published (see [DATA.md](..
 - **Weak encryption.** The Test 5 counter is protected only by a single-byte XOR with a fixed key, which is obfuscation, not protection against a real attacker.
 - **Weak randomness.** The Test 3 intervals come from `rand()` seeded with the time since boot, so their unpredictability is lower than the ideal 17.9 bits.
 - **Test 5 counter.** The decrypted counter does not count up by one, because of how the broadcaster builds it (section 5).
-- **Missing source.** The code for peer-triggered rotation in Test 5 is not among the files kept in this repository.
+- **Peer rotation checked in logic only.** The peer-rotation debounce in the Test 5 listener was checked with a Python model of the decision rule (`listener-final/test_peer_rotation_logic.py`), not built or run on the nRF52840 hardware.
 - **Observational evaluation.** The conclusions come from logs and RSSI graphs. I did not implement a tracking attack and measure how often it succeeds.
 - **Small, controlled setup.** Five nodes, one location, ambient radio noise from whatever happened to be nearby. Larger or moving scenarios are untested.
 - **Signal strength.** As the Test 4 results show, rotating together does not hide devices from an observer who uses RSSI. A scheme that also varies transmit power or timing would be needed to address that.

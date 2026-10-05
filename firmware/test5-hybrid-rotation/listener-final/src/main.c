@@ -186,6 +186,13 @@ static void device_found(const bt_addr_le_t *addr, int8_t rssi, uint8_t type, st
                 observed_device_rssi[observed_device_count] = rssi;
                 observed_device_times[observed_device_count] = k_uptime_get();
                 observed_device_count++;
+
+                // Rotate on a new peer sighting, debounced
+                int64_t current_time = k_uptime_get();
+                if (current_time - last_rotation_time >= DEBOUNCE_INTERVAL_MS) {
+                    uint8_t next_counter = (autonomous_counter + 1) % 256;
+                    rotate_device_name(next_counter, "Peer Rotation");
+                }
             }
         }
 
