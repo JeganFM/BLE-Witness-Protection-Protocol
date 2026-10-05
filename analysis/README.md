@@ -10,6 +10,8 @@ The logs contain timestamped lines such as sync detections, name rotations (`Rot
 
 Most scripts read a log file named on a `log_file = r"..."` line near the bottom of the file (relative to the working directory). To reproduce a graph, copy or point that line at the matching log in [`../results`](../results), then run the script. The scripts are kept exactly as they were during the project, so you may need to adjust that filename. For example, `test5/Viz.py` originally pointed at a log file whose name is now `results/test5/logs/test5_run_20241130.log`.
 
+**Note:** The raw logs from the passive observer (Iris5) are not published, because they contain other people's devices (see [DATA.md](../DATA.md)). Several scripts here, mainly the Test 1 to 4 graphers, were written to read those logs, so they will not run on this repository's data as-is. The graphs they produced are in [`../results`](../results), and the logs from the project's own nodes are included.
+
 ## Layout
 
 | Folder | Contents |

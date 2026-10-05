@@ -56,9 +56,8 @@ The four serial terminals during a Test 4 run (Iris6, Iris9, Iris7 listeners and
 firmware/    C firmware (Zephyr RTOS / nRF Connect SDK) for every device and every test iteration,
              plus compiled .hex images and the early prototypes that led up to the tests
 analysis/    Python scripts that parse the serial logs and produce the RSSI-over-time graphs
-results/     Raw serial logs, parsed data, and generated graphs, organised per test
+results/     Serial logs from the project's own nodes, parsed data, and generated graphs, organised per test
 docs/        Technical report and design diagrams
-recordings/  Index of demo screen recordings (hosted off-GitHub because of file size)
 ```
 
 See [firmware/README.md](firmware/README.md) for a guide to every firmware folder (which is which, and how the iterations relate) and [analysis/README.md](analysis/README.md) for the scripts.
@@ -87,7 +86,9 @@ This project was developed between **July and December 2024**. The repository wa
 
 ## Data handling
 
-The observer (Iris5) logs record every BLE advertisement in range, which includes devices belonging to other people. In this repository, the addresses of devices that are not part of the project are replaced with placeholder addresses (`02:00:00:xx:xx:xx`) and their advertised names are replaced with `REDACTED`. Addresses and names of the project's own Iris nodes are unchanged, so the analysis scripts and graphs work as before. Local account names were also removed from a few file paths in the analysis scripts (now plain filenames, read from the working directory) and from the window titles in one screenshot. The affected files are marked in [docs/provenance/MANIFEST.csv](docs/provenance/MANIFEST.csv).
+The passive observer (Iris5) records every BLE advertisement in range, which includes devices belonging to other people. For that reason the raw observer logs and the screen recordings of the test runs are **not published** in this repository. The graphs generated from them are included, along with the logs from the project's own nodes and the parsed datasets. See [DATA.md](DATA.md) for details.
+
+Local account names were also removed from a few file paths in the analysis scripts (now plain filenames, read from the working directory) and from the window titles in one screenshot. The affected files are marked in [docs/provenance/MANIFEST.csv](docs/provenance/MANIFEST.csv).
 
 ## Author
 
