@@ -6,7 +6,7 @@ Technical report for the BLE Witness Protection Protocol project.
 
 Bluetooth Low Energy (BLE) devices advertise an identifier that any nearby scanner can read. If that identifier never changes, the device can be followed. BLE already lets devices change their address over time, but the changes are not coordinated, and the timing and signal strength of a device can still give it away. This project asks a narrow question: if several devices that belong together change their identity at the same moment, can they hide among each other?
 
-I built a small testbed of five nRF52840 boards, wrote firmware for five identity-rotation strategies, ran each one while a passive observer recorded what an outsider could see, and compared the results. The main finding is that coordinating the change works: on a shared sync signal the three listeners switched identity together, every time. The main limitation is that the devices rotated their advertised name instead of their Bluetooth address, so the results show the coordination mechanism but are not a full privacy guarantee.
+I built a small testbed of five nRF52840 boards, wrote firmware for five identity-rotation strategies, ran each one while a passive observer recorded what an outsider could see, and compared the results. The main finding is that coordinating the change works: on a shared sync signal the three listeners switched identity together at every rotation I measured. The main limitation is that the devices rotated their advertised name instead of their Bluetooth address, so the results show the coordination mechanism but are not a full privacy guarantee.
 
 ## 1. Motivation
 
@@ -34,41 +34,43 @@ Most of the work on coordinating address changes looks at a single pair of devic
 
 ### 2.1 How an RPA is built
 
-A Resolvable Private Address is 48 bits long. It is made of a 24-bit random part and a 24-bit hash:
+A Resolvable Private Address is 48 bits long. It is made of a 24-bit part called `prand` and a 24-bit hash:
 
-$$\text{RPA} = \text{prand} \,\|\, \text{hash}, \qquad \text{hash} = \text{ah}(\text{IRK},\, \text{prand})$$
+$$\text{RPA} = \text{prand} \mathbin{\Vert} \text{hash}, \qquad \text{hash} = \text{ah}(\text{IRK},\, \text{prand})$$
 
-`prand` has its top two bits fixed (to `01`, which marks the address as resolvable), so 22 bits are random. The hash function `ah` is one AES-128 encryption of the padded `prand` under the 128-bit Identity Resolving Key (IRK), keeping the lowest 24 bits:
+Here $\Vert$ means joining two bit strings end to end. `prand` has its top two bits fixed to `01`, which marks the address as resolvable, so 22 of its 24 bits are random. The hash function `ah` is one AES-128 encryption (written $e$) of `prand`, padded with 104 zero bits ($0^{104}$) to fill a 128-bit block, under the 128-bit Identity Resolving Key (IRK). Only the lowest 24 bits of the result are kept:
 
-$$\text{ah}(k, r) = e\big(k,\; 0^{104} \,\|\, r\big) \bmod 2^{24}$$
+$$\text{ah}(k, r) = e\big(k,\; 0^{104} \mathbin{\Vert} r\big) \bmod 2^{24}$$
 
 A peer that holds the IRK recomputes the hash and compares. A device that does not hold the IRK cannot do this, so to it the address is just 48 random-looking bits. A wrong IRK matches by chance with probability $2^{-24}$. The specification suggests changing the address about every 15 minutes by default.
 
 ### 2.2 Why rotation alone leaks
 
-An observer sees a stream of (time, identifier, signal strength) records. If a device rotates every $T$ seconds on a fixed schedule, then after one observed rotation the observer knows every future rotation time. The uncertainty about the next rotation time, in bits, is zero:
+An observer sees a stream of (time, identifier, signal strength) records. If a device rotates every $T_0$ seconds on a fixed schedule, then once the observer has seen two rotations it knows every future rotation time. The uncertainty about the next rotation time, measured as entropy in bits (roughly, how many yes/no questions it takes to pin the time down), is zero:
 
 $$H(\text{next rotation}) = 0 \quad \text{when the interval is fixed.}$$
 
-When an identifier disappears at time $t$ and a new one appears at $t+\varepsilon$ with a similar signal strength, linking them is easy for small $\varepsilon$. The same is true of the received signal strength, which falls with distance. The standard log-distance path-loss model is:
+When an identifier disappears at time $t$ and a new one appears at $t+\varepsilon$, the two are easy to link if $\varepsilon$ is small. Received signal strength (RSSI) is a second clue, because it falls with distance. The standard log-distance path-loss model is:
 
-$$\text{RSSI}(d) = \text{RSSI}(d_0) - 10\,n\,\log_{10}\!\left(\frac{d}{d_0}\right) + X_\sigma$$
+$$\text{RSSI}(d) = \text{RSSI}(d_0) - 10\,\gamma\,\log_{10}\!\left(\frac{d}{d_0}\right) + \eta$$
 
-where $d$ is the distance, $d_0$ a reference distance, $n$ the path-loss exponent of the environment and $X_\sigma$ random noise. I did not fit this model to the data. It is here to explain why two devices at similar distances from an observer have similar RSSI traces, which is exactly what the Test 1 graph shows.
+where $d$ is the distance, $d_0$ a reference distance, $\gamma$ the path-loss exponent of the environment and $\eta$ random noise. I did not fit this model to the data. It is here to explain why two devices at similar distances from an observer have similar RSSI traces, which is what the Test 1 graph shows.
 
 ### 2.3 The effect of rotating together
 
-Suppose $N$ devices rotate at the same instant, and the observer uses only the timing of the changes. The observer sees $N$ old identities vanish and $N$ new ones appear. There are $N!$ ways to pair them, so a blind guess for one device is right with probability:
+Suppose $N$ devices rotate at the same instant. The observer sees $N$ old identities vanish and $N$ new ones appear. If the identifiers say nothing about which device they belong to, and the observer has only the timing of the changes, every pairing of old to new is equally likely, and a guess for any one device is right with probability:
 
 $$P(\text{correct link}) = \frac{1}{N}$$
 
-If the devices rotate at different moments, the observer can pair each old identity with the new one that follows it, and the probability goes to 1. This is the reason for synchronising. Signal strength is the side information that weakens this argument, and the experiments below show that it does.
+If the devices rotate at different moments, the observer can pair each old identity with the new one that follows it, and the probability rises towards 1. That is the reason for synchronising.
+
+The $1/N$ figure is an ideal bound, and it rests on two assumptions: identifiers that reveal nothing about the device, and no other side information. The experiments below break both. The names in this testbed keep a per-device prefix such as `Iris9_`, and signal strength tells the devices apart.
 
 ## 3. Approach: rotate the advertised name
 
 Changing the Bluetooth address itself would have meant changing how Zephyr's Bluetooth stack manages its built-in privacy features. That code is tightly integrated with the stack and the specification, and modifying it risks breaking things that are hard to debug. Instead the devices rotate the advertised device name, which is a field in the advertising packet that can be changed safely at run time.
 
-A name such as `Iris9_3` then plays the role of the address. The name sequence is $\text{ID}_k = \text{prefix} \,\|\, n_k$ for a counter $n_k$. This keeps the experiment about the coordination logic, which is what I wanted to measure. It also means the results do not transfer one-for-one to address rotation, and I come back to that in the limitations.
+A name such as `Iris9_3` then plays the role of the address: a fixed prefix joined to a number, $\text{ID}_k = \text{prefix} \mathbin{\Vert} n_k$. In the test firmware the prefix is fixed for each device (`Iris6_`, `Iris7_`, `Iris9_`), so the name alone still tells an observer which device it is. The experiments therefore test the timing and coordination of the changes, not whether the names are unlinkable. That is what I wanted to measure, and it also means the results do not transfer one-for-one to address rotation. I come back to that in the limitations.
 
 ## 4. Testbed
 
@@ -89,38 +91,62 @@ The broadcaster and observer firmware started from the nRF Connect SDK Bluetooth
 | Test | Rule | Rotation time |
 |------|------|---------------|
 | 1 | No rotation (baseline) | never |
-| 2 | Fixed interval | $t_k = kT$, $T = 60$ s |
-| 3 | Random interval | $t_{k+1} - t_k \sim U[60, 300)$ s |
-| 4 | On the broadcaster's `SYNC` | $t_k = s_k + \delta_i$ for listener $i$ |
-| 5 | Hybrid: sync, autonomous fallback, peer observation | see below |
+| 2 | Fixed interval | $t_k = kT_0$, with $T_0 = 60$ s |
+| 3 | Random interval | the interval $X$ between rotations is uniform on 60 to 300 s |
+| 4 | On the broadcaster's `SYNC` | listener $i$ rotates at $t_k = s_k + \delta_i$ (defined below) |
+| 5 | Hybrid: sync, autonomous timer, peer observation | see below |
 
 ### Test 3: random intervals
 
-The firmware draws each interval as `MIN + rand() % (MAX - MIN)` in milliseconds, with `MIN` = 60 000 and `MAX` = 300 000. That is a discrete uniform distribution, so the expected interval, its spread and the uncertainty about the next rotation are:
+The firmware draws each interval as `MIN + rand() % (MAX - MIN)` in milliseconds, with `MIN` = 60 000 and `MAX` = 300 000. Let $X$ be the interval, uniform over $[T_{\min}, T_{\max})$ with $T_{\min} = 60$ s and $T_{\max} = 300$ s (the firmware's version is discrete, in whole milliseconds, which changes none of the numbers below). The expected interval and its spread are:
 
-$$E[X] = \frac{T_{\min} + T_{\max}}{2} = 180\ \text{s}, \qquad \sigma = \frac{T_{\max} - T_{\min}}{\sqrt{12}} \approx 69.3\ \text{s}, \qquad H = \log_2(240\,000) \approx 17.9\ \text{bits}$$
+$$E[X] = \frac{T_{\min} + T_{\max}}{2} = 180\ \text{s}$$
 
-(at millisecond resolution; at one-second resolution $H = \log_2 240 \approx 7.9$ bits).
+$$\sigma_X = \frac{T_{\max} - T_{\min}}{\sqrt{12}} \approx 69.3\ \text{s}$$
+
+The uncertainty about the next rotation time, at millisecond resolution, is:
+
+$$H = \log_2(240\,000) \approx 17.9\ \text{bits}$$
+
+At one-second resolution it is $H = \log_2 240 \approx 7.9$ bits. Treat these as per-draw figures for an ideal random source. The firmware seeds `rand()` with `k_uptime_get_32()`, the time since boot, which is nearly the same on every start, so the real unpredictability is lower than 17.9 bits.
 
 ### Test 4: rotation on a sync signal
 
-The broadcaster increments a one-byte counter each period $P$ and advertises it:
+The broadcaster increments a one-byte counter once per broadcast, every 60 s in the Test 4 firmware, and advertises it:
 
 $$n_{k+1} = (n_k + 1) \bmod 255$$
 
-A listener that decodes a valid `SYNC` rotates to $\text{prefix} \,\|\, n_k$. Each listener's rotation time is the broadcast time plus its own detection and processing delay $\delta_i$, so the spread between listeners is:
+The code uses `% UINT8_MAX`, so the counter takes the values 0 to 254 and never sends 255.
+
+Let $s_k$ be the time the $k$-th `SYNC` is broadcast. A listener that accepts it rotates to its next name. In the final Test 4 listener the number in the name is a local index that goes up by one for each accepted `SYNC` (`Iris6_1`, `Iris6_2`, ...). The broadcaster's counter is used only to decide whether a `SYNC` is new. Each listener's rotation time is $t_k = s_k + \delta_i$, where $\delta_i$ is that listener's own detection and processing delay, so the spread between listeners is:
 
 $$\Delta = \max_i \delta_i - \min_i \delta_i$$
 
-A debounce rule drops a repeated `SYNC` that arrives within $D$ seconds of the last accepted one (accept if $t - t_{\text{last}} \ge D$, with $D = 5$ s). Without it, duplicate copies of the same `SYNC` can trigger repeated rotations.
+A debounce rule decides whether to accept a `SYNC` with counter $n$ at time $t$. The listener accepts it if the counter has changed or enough time has passed:
+
+$$n \neq n_{\text{last}} \quad \text{or} \quad t - t_{\text{last}} \ge D$$
+
+The minimum gap $D$ is 300 s in the final Test 4 listener (a comment in the code still says 60 s) and 600 s in the Test 5 listener. An earlier Test 4 version used 50 s. Without the rule, duplicate copies of the same `SYNC` could trigger repeated rotations. The Test 5 listener also defines a 5 s `DEBOUNCE_INTERVAL_MS` that is not used.
 
 ### Test 5: hybrid
 
-Test 5 has three rotation triggers. The broadcaster sends a `SYNC` every 10 minutes whose counter is encrypted. A listener that has heard no `SYNC` rotates by itself after a fallback interval (5 minutes in the final version). And a listener that sees another listener rotate adjusts its own sequence to match. The encryption in the Test 5 broadcaster is a one-byte XOR:
+Test 5 combines three rotation triggers, and the code kept in this repository implements two of them.
 
-$$c_k = n_k \oplus K, \qquad n_k = c_k \oplus K, \qquad K = \texttt{0x5A}$$
+1. **Sync.** The broadcaster sends a `SYNC` every 10 minutes whose counter is XOR-obfuscated. The listener decrypts it and, if the debounce rule accepts it, takes the decrypted counter as the number in its name.
+2. **Autonomous timer.** Every 5 minutes the listener rotates to the next counter, wrapping at 256. This timer is not reset by a `SYNC`, so it runs regardless and adds rotations on top of the synchronised ones. It is not a fallback that only starts when the `SYNC` is missing.
+3. **Peer observation.** The design has a listener rotate when it sees another listener rotate, and the Test 5 graph shows such rotations. The listener source kept here only logs the peers it sees, so the code for that trigger is not among the files in this repository.
+
+The obfuscation in the Test 5 broadcaster is a one-byte XOR with a fixed key:
+
+$$c_k = n_k \oplus K, \qquad n_k = c_k \oplus K, \qquad K = \mathtt{0x5A}$$
 
 This is a stand-in for real encryption. A single-byte key has $2^8$ possibilities and the counter starts at a known value, so an observer can recover $K$ immediately. It shows the flow (encrypt, broadcast, decrypt, validate) but does not provide security. AES in counter mode is the obvious replacement and is listed under future work.
+
+There is also a bug in how the Test 5 broadcaster builds its counter. It adds one to the previously *encrypted* byte, not to the plaintext counter:
+
+$$n_{k+1} = (c_k + 1) \bmod 255, \qquad c_{k+1} = n_{k+1} \oplus K$$
+
+So the decrypted counter does not count up by one. It goes 1, 92, 7, 94, 5, 96, 59, and so on. That is why the Test 5 graph has names such as `Iris9_92` and `Iris9_7` instead of a clean sequence. The listener decrypts each value correctly, so synchronisation still works, but the numbers in the names are not a simple count.
 
 ## 6. Results
 
@@ -134,7 +160,7 @@ I measured the intervals from the listeners' own logs:
 | 3 | Interval between rotations, 67 intervals from three listeners | uniform on [60, 300), mean 180 s, sd 69.3 s | min 61, max 299, mean 171.7, sd 71.1 |
 | 4 | Gap between detected `SYNC` signals, about 41 per listener | 60 s | min 54, max 61, mean about 60 |
 
-Test 3 matches the uniform model well, with the sample mean slightly below 180 s as expected for 67 draws. In Test 4 the shorter gap at 54 s is the first one, between the listener starting up and the next broadcast.
+Test 3 matches the uniform model well. The sample mean of 171.7 s is about one standard error ($\sigma_X / \sqrt{67} \approx 8.5$ s) below 180 s, which is ordinary sampling noise. In Test 4 the shorter gap at 54 s is the first one, between the listener starting up and the next broadcast.
 
 ### What the observer saw
 
@@ -152,23 +178,27 @@ These come from the observer's capture, which is not published (see [DATA.md](..
 
   ![Test 3](../results/test3/graphs/Test3_All_Devices.png)
 
-- **Test 4.** All three listeners changed together on each `SYNC`. In the observer capture, the first sighting of each listener's new name falls within 1 second of the others at every one of the six rotations I measured (rotations at about 69, 129, 189, 249, 309 and 370 s, roughly 60 s apart). The observer's timestamps have a resolution of 1 second, so $\Delta$ is at most about a second, and could be smaller. That makes the timing-only guess close to $1/N$. But the devices could still recognise each other, because each kept broadcasting its current name while it rotated, and signal strength continued to tie each new name to the old one.
+- **Test 4.** All three listeners changed together on each `SYNC`. In the observer capture, the first sighting of each listener's new name falls within 1 second of the others at every one of the six rotations I measured (rotations at about 69, 129, 189, 249, 309 and 370 s, roughly 60 s apart). The observer's timestamps have a resolution of 1 second, so $\Delta$ is at most about a second, and could be smaller. So the timing of the changes alone does not tell the three devices apart. That is not the same as the $1/N$ bound, though. The names kept their per-device prefixes (`Iris6_`, `Iris7_`, `Iris9_`), which identify the device whatever the timing, and signal strength continued to tie each new name to the old one. The devices could also recognise each other, because each kept broadcasting its current name while it rotated.
 
   ![Test 4](../results/test4/graphs/Test4_All_Devices.png)
 
-- **Test 5.** Over a 30-minute run the three triggers were visible separately: synchronised changes at the start and at 10 minutes, autonomous changes every 5 minutes, and peer-triggered changes in between. The debounce rule suppressed duplicate `SYNC` signals, so no rapid back-to-back rotations appear. In the graph below, circles are sync-signal rotations, diamonds are peer-observed rotations and squares are autonomous rotations.
+- **Test 5.** Over a 30-minute run the three triggers were visible separately: synchronised changes at the start and at 10 minutes, autonomous changes every 5 minutes, and peer-triggered changes in between. No rapid back-to-back rotations appear, which fits the debounce rule. The peer-triggered rotations are in the data, but as noted in section 5 the code for that trigger is not among the files kept in this repository. In the graph below, circles are sync-signal rotations, diamonds are peer-observed rotations and squares are autonomous rotations.
 
   ![Test 5](../results/plotly-exports/newplot-20241208-060345.png)
 
 ### Problems found along the way
 
-- The broadcaster is a single point of failure. If it is out of range, the listeners stop receiving `SYNC` and drift apart. The autonomous fallback in Test 5 was added for this reason.
+- The broadcaster is a single point of failure. If it is out of range, the listeners stop receiving `SYNC` and drift apart. Test 5 adds an autonomous timer so the listeners keep rotating even when no `SYNC` arrives.
 - Radio is noisy. The same `SYNC` is often heard more than once, and corrupted copies appear (for example `SYNC_1000` when `SYNC_100` was sent). The debounce rule and a small name-normalising function were needed to keep listeners from acting on duplicates and garbage.
 
 ## 7. Limitations
 
 - **Name, not address.** The devices rotated the advertised name. The Bluetooth address, which is what real trackers read, did not change in these experiments. The results show that the coordination works, not that an address-level scheme would hold up the same way.
-- **Weak encryption.** The Test 5 counter is protected only by a single-byte XOR.
+- **Linkable names.** Every device kept a fixed name prefix, so the names themselves identify the device. The $1/N$ argument in section 2.3 is an ideal bound that these experiments do not reach.
+- **Weak encryption.** The Test 5 counter is protected only by a single-byte XOR with a fixed key, which is obfuscation, not protection against a real attacker.
+- **Weak randomness.** The Test 3 intervals come from `rand()` seeded with the time since boot, so their unpredictability is lower than the ideal 17.9 bits.
+- **Test 5 counter.** The decrypted counter does not count up by one, because of how the broadcaster builds it (section 5).
+- **Missing source.** The code for peer-triggered rotation in Test 5 is not among the files kept in this repository.
 - **Observational evaluation.** The conclusions come from logs and RSSI graphs. I did not implement a tracking attack and measure how often it succeeds.
 - **Small, controlled setup.** Five nodes, one location, ambient radio noise from whatever happened to be nearby. Larger or moving scenarios are untested.
 - **Signal strength.** As the Test 4 results show, rotating together does not hide devices from an observer who uses RSSI. A scheme that also varies transmit power or timing would be needed to address that.

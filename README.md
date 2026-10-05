@@ -43,7 +43,7 @@ Five Raspberry Pis, each controlling an **nRF52840 DK** over a SEGGER J-Link:
 | 2 | **Fixed-interval rotation**: every 60 s, independently | [firmware/test2-fixed-interval-rotation](firmware/test2-fixed-interval-rotation) | [results/test2](results/test2) |
 | 3 | **Random-interval rotation**: every 1 to 5 min | [firmware/test3-random-interval-rotation](firmware/test3-random-interval-rotation) | [results/test3](results/test3) |
 | 4 | **Synchronized rotation**: listeners rotate on the broadcaster's `SYNC` signal, with debouncing | [firmware/test4-synchronized-rotation](firmware/test4-synchronized-rotation) | [results/test4](results/test4) |
-| 5 | **Hybrid rotation**: sync signal with an XOR-obfuscated counter, autonomous fallback, and peer-observed rotation | [firmware/test5-hybrid-rotation](firmware/test5-hybrid-rotation) | [results/test5](results/test5) |
+| 5 | **Hybrid rotation**: sync signal with an XOR-obfuscated counter, an autonomous 5-minute timer, and peer-observed rotation | [firmware/test5-hybrid-rotation](firmware/test5-hybrid-rotation) | [results/test5](results/test5) |
 
 ## Results
 
