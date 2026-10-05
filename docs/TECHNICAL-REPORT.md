@@ -22,9 +22,9 @@ RPAs help, but published research has shown that they are not enough on their ow
 
 ### Why "witness protection"
 
-The name comes from the real thing. When a person has to disappear, they are given a new name and moved somewhere new, so that anyone who knew the old identity can no longer find them. The idea here is the same: a device that must not be followed gets a new name, and the old one stops being used.
+The name comes from witness protection, where a person at risk is given a new name and a new place so that people who knew the old identity cannot find them. The protocol does the same for a device: it takes a new name and stops using the old one.
 
-The comparison also predicted one of the results. A new name does not help much if the person keeps living at the same address, because anyone watching the house can see who walks in and out. For a BLE device the equivalent of the address is where it is, which an observer can estimate from signal strength. That is what Test 4 showed: the names changed together, but signal strength still tied each new name to the old one. Changing identity and location together is the harder part, and it is the direction I would take next.
+The comparison also shows the weak spot. A new name does not help if the person stays in the same house, because anyone watching can still see who comes and goes. For a BLE device, the house is its position, which a scanner can estimate from signal strength. Test 4 showed exactly this: the names changed together, but signal strength still linked each new name to the old one. Hiding position as well as name is the next problem.
 
 ### Why coordination
 
@@ -156,7 +156,9 @@ These come from the observer's capture, which is not published (see [DATA.md](..
 
   ![Test 4](../results/test4/graphs/Test4_All_Devices.png)
 
-- **Test 5.** Over a 30-minute run the three triggers were visible separately: synchronised changes at the start and at 10 minutes, autonomous changes every 5 minutes, and peer-triggered changes in between. The debounce rule suppressed duplicate `SYNC` signals, so no rapid back-to-back rotations appear.
+- **Test 5.** Over a 30-minute run the three triggers were visible separately: synchronised changes at the start and at 10 minutes, autonomous changes every 5 minutes, and peer-triggered changes in between. The debounce rule suppressed duplicate `SYNC` signals, so no rapid back-to-back rotations appear. In the graph below, circles are sync-signal rotations, diamonds are peer-observed rotations and squares are autonomous rotations.
+
+  ![Test 5](../results/plotly-exports/newplot-20241208-060345.png)
 
 ### Problems found along the way
 

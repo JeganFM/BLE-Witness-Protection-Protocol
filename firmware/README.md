@@ -22,7 +22,7 @@ The folders reflect real iteration: several tests have multiple versions (`liste
 | `test2-fixed-interval-rotation` | `Final_Test_2` | Rotates the advertised name every 60 s on a fixed timer, with timestamps in the log. |
 | `test3-random-interval-rotation` | `Final_Test_3` | Rotates the name at a random interval between 1 and 5 minutes. |
 | `test4-synchronized-rotation/broadcaster-iris3` | `Yo_broadcast` | **Iris3 broadcaster.** Advertises a `SYNC` manufacturer-data packet with an incrementing counter every 60 s. |
-| `test4-synchronized-rotation/listener-v1` | `Fianl_Test_4` | First sync-based listener: rotates through a pre-generated list of names when a `SYNC` is heard. |
+| `test4-synchronized-rotation/listener-v1` | `Fianl_Test_4` (sic) | First sync-based listener: rotates through a pre-generated list of names when a `SYNC` is heard. |
 | `test4-synchronized-rotation/listener-v2` | `Final_Test_4_2` | Listener with counter-based name rotation (`Iris9_<n>`). |
 | `test4-synchronized-rotation/listener-v3` | `Final_Test_4_3` | **Final Test 4 listener.** Adds `SYNC` debouncing and detects the other listeners' rotated names, logging RSSI. |
 | `test4-synchronized-rotation/drafts` | `Untitled-1.cpp` | Listener draft with name normalisation helpers. |
