@@ -13,6 +13,7 @@ This project is a hardware testbed and a set of experiments for that question. F
 - The devices rotated the advertised **name**, not the Bluetooth **address**. This was a deliberate shortcut, because address handling is built into Zephyr's Bluetooth stack, and it means the results show the coordination logic rather than a complete privacy guarantee.
 - The sync counter in Test 5 is obfuscated with a single-byte XOR. That is a placeholder for real encryption, not security.
 - The evaluation is observational (logs and RSSI graphs). No tracking attack was implemented and measured.
+- The Test 5 peer-rotation trigger was added after the original 2024 tests and checked only with a logic model, not run on hardware.
 - The graphs for Tests 1 to 4 came from observer logs that are not published, so they can't be regenerated from this repository (see [DATA.md](DATA.md)).
 
 ## The problem
