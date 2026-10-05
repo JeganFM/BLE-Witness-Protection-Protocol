@@ -12,6 +12,8 @@ BLE devices advertise a static identifier, which makes them easy to track. Addre
 
 ## The approach: a "witness protection" protocol
 
+The name comes from witness protection: someone at risk is given a new name and a new place, so that anyone who knew the old identity can no longer find them. Here, a BLE device gets a new advertised name, and the devices change together so that the old and new identities can't be matched up.
+
 Every device in the network periodically adopts a new identity (here, the BLE device name, e.g. `Iris9_1` → `Iris9_2`). The protocol studies *how and when* those changes happen, so that an outside observer can no longer link the old identity to the new one.
 
 ### Hardware and roles

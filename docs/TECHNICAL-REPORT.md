@@ -20,6 +20,14 @@ RPAs help, but published research has shown that they are not enough on their ow
 - If the central and the peripheral change addresses at different moments, the gap between the two changes can be used to link them.
 - Many cheap or old devices never rotate at all.
 
+### Why "witness protection"
+
+The name comes from the real thing. When a person has to disappear, they are given a new name and moved somewhere new, so that anyone who knew the old identity can no longer find them. The idea here is the same: a device that must not be followed gets a new name, and the old one stops being used.
+
+The comparison also predicted one of the results. A new name does not help much if the person keeps living at the same address, because anyone watching the house can see who walks in and out. For a BLE device the equivalent of the address is where it is, which an observer can estimate from signal strength. That is what Test 4 showed: the names changed together, but signal strength still tied each new name to the old one. Changing identity and location together is the harder part, and it is the direction I would take next.
+
+### Why coordination
+
 Most of the work on coordinating address changes looks at a single pair of devices. Real setups are not pairs. A phone talks to a watch, earbuds and a tracker at once, and a car has many sensors. So the question I wanted to test on real hardware was how a group of peripherals can change identity together, and what it costs when they do. I chose to build and measure it rather than simulate it, because timing and signal strength are exactly the parts that simulations tend to get wrong.
 
 ## 2. Background and the math
